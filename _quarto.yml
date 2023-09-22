@@ -1,0 +1,35 @@
+# project
+project:
+  type: book
+  output-dir: docs
+
+# front matter
+book:
+  title: "GEOG0014 Geography in the Field II"
+  author: " Week 08 by [Justin van Dijk](https://mappingdutchman.com/)"
+  date: "9/22/2023"
+  chapters:
+  
+    - index.qmd
+    
+  downloads: [pdf]
+
+# output
+format:
+  html:
+    theme: 
+      flatly
+    code-overflow: scroll
+    code-tools: 
+      source: https://github.com/jtvandijk/GEOG0014
+      toggle: false
+      caption: none
+    code-block-bg: "#f0f0f0"
+    callout-appearance: simple
+  pdf: 
+    pdf-engine: xelatex
+
+# misc
+title-block-banner: false
+editor: source
+
