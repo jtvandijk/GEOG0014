@@ -1,0 +1,48 @@
+# Worksheet 
+Excellent. You have worked through the steps in this computer tutorial on [downloading](#downloading-crime-data) and [mapping](#visualising-data) crime data, you need to conduct the following analysis **as a group**:
+
+## Part I: Camden and Islington 
+1.	Using what you have learnt in the computer tutorial, create two heatmaps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*.
+2.	There are a number of crime **hot spots** for *anti-social behaviour* and *theft from person* that appear near UCL (particularly around Kings Cross Station).  Visit one of these areas and note down the features that distinguish them from their surrounding lower crime areas. 
+3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
+
+::: {.callout-tip}
+This part of the assignment focuses on *anti-social behaviour* and *theft from person* in Camden and Islington.
+:::
+
+::: {.callout-warning}
+For your visit: **make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](https://moodle.ucl.ac.uk/pluginfile.php/4433099/mod_resource/content/1/%20GiFII%20risk%20assessment.pdf)**. Check the weather forecast and prepare accordingly. 
+:::
+
+## Part II: Your allocated street
+1.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
+2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a heatmap for all crime around your street in **November 2020** and **November 2022**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other data sets might be useful to analyse crime in London? 
+
+:::{.callout-tip}
+This part of the assignment focuses on *all types* of crime in your allocated street.
+:::
+
+:::{.callout-note}
+If your allocated street falls outside Camden and Islington but you would like to incorporate a road network in your map, you can download the full road network for London here as a `zip` file: [[Link]](https://github.com/jtvandijk/GEOG0014/blob/master/data/AllRoads.zip). Please do note that this file is significantly larger than the `roads` file that we have used so far, so you may encounter some performance issues.
+:::
+
+## Worksheet submission
+Please submit your answers to the questions above in the form of a short **group** report. The report should include:
+
+- No more than **500** words.
+- Maximum **4** maps, and, if using, a maximum of **2** photographs. 
+
+You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=26400):
+
+- One submission per group. Make sure to include the [group work coversheet](https://moodle.ucl.ac.uk/pluginfile.php/4674309/mod_label/intro/GEOG0014%20Geography%20in%20the%20Field%20II_Groupwork_coversheet.docx) in your submission and you follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/course/view.php?id=26400). 
+- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 20 March**, using the Turnitin link on the course [Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=26400) *GEOG0014 Worksheet 4 London mapping*.
+- Please submit the worksheet as a `Word` or `PDF` document, no larger than 40 MB.
+- Do check that the file has uploaded and displays correctly. 
+
+:::{.callout-warning}
+Only one member of each group should submit the report, following the instructions on Moodle.
+:::
+
+## Further questions
+Any questions about these tasks please use the W08 forum on [Moodle](https://moodle.ucl.ac.uk/mod/forum/view.php?id=4737245&forceview=1). [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)

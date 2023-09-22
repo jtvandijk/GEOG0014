@@ -5,14 +5,15 @@ project:
 
 # front matter
 book:
-  title: "GEOG0014 Geography in the Field II"
-  author: " Week 08 by [Justin van Dijk](https://mappingdutchman.com/)"
+  title: "GEOG0014 Geography in the Field II 2023-2024"
+  author: "Week 08 by [Justin van Dijk](https://mappingdutchman.com/)"
   date: "9/22/2023"
   chapters:
   
     - index.qmd
-    
-  downloads: [pdf]
+    - data-prep.qmd
+    - map-crime.qmd
+    - worksheet.qmd
 
 # output
 format:
@@ -26,8 +27,6 @@ format:
       caption: none
     code-block-bg: "#f0f0f0"
     callout-appearance: simple
-  pdf: 
-    pdf-engine: xelatex
 
 # misc
 title-block-banner: false
