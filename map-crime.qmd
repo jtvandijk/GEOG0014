@@ -1,7 +1,7 @@
 # Data mapping
 
 ## Starting QGIS
-Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the taskbar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. 
+Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. 
 
 ::: {.callout-warning}
 Do not use QGIS 2.18 as the steps in this tutorial will not work!
