@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GEOG0014 Geography in the Field II 2023-2024 - 2&nbsp; Data preparation</title>
+<title>data-prep</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,16 +37,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
-  "type": "textbox",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -61,8 +63,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -74,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-prep.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data preparation</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-prep.html">Data preparation</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -88,39 +92,39 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">GEOG0014 Geography in the Field II 2023-2024</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./assets/logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/jtvandijk/GEOG0014" rel="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Search"></div>
+</div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Mapping London?</span></span></a>
+ <span class="menu-text">Mapping London?</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data-prep.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data preparation</span></span></a>
+ <span class="menu-text">Data preparation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./map-crime.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data mapping</span></span></a>
+ <span class="menu-text">Data mapping</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./worksheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Worksheet</span></span></a>
+ <span class="menu-text">Worksheet</span></a>
   </div>
 </li>
     </ul>
@@ -130,73 +134,63 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">2.1</span> Getting started</a></li>
-  <li><a href="#downloading-crime-data" id="toc-downloading-crime-data" class="nav-link" data-scroll-target="#downloading-crime-data"><span class="header-section-number">2.2</span> Downloading crime data</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link active" data-scroll-target="#data-preparation">Data preparation</a>
+  <ul class="collapse">
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#downloading-crime-data" id="toc-downloading-crime-data" class="nav-link" data-scroll-target="#downloading-crime-data">Downloading crime data</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jtvandijk/GEOG0014/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data preparation</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source" data-quarto-source-url="https://github.com/jtvandijk/GEOG0014"><i class="bi"></i></button></div></div>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="getting-started" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">2.1</span> Getting started</h2>
+<section id="data-preparation" class="level1">
+<h1>Data preparation</h1>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
 <p>Some of you may already have played around with some GIS software such as <a href="https://www.arcgis.com/index.html">ArcGIS</a>, but today we will be using the open-source GIS software suite <a href="https://www.qgis.org/en/site/">QGIS</a>. A copy of <a href="https://www.qgis.org/en/site/">QGIS</a> comes pre-installed on all cluster room computers as well as on <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a>. Desktop@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop@UCL Anywhere service to ensure that everyone uses the same version.</p>
 <p>Let’s get started by opening an internet browser such as <a href="https://www.google.co.uk/chrome/?brand=FHFK&amp;gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&amp;gclsrc=aw.ds">Google Chrome</a> or <a href="https://www.microsoft.com/en-us/edge">Microsoft Edge</a>. Now navigate to: <a href="https://ucldesktop.cloud.com">https://ucldesktop.cloud.com</a>.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-ucl-desktop-login_95538bcec01932b1137bd79161629339">
 <div class="cell-output-display">
 <div id="fig-ucl-desktop-login" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/ucl_login.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.1: <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a> login interface. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_login.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;1: <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a> login interface. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_login.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>You can log in with your normal <strong>UCL username</strong> and <strong>UCL password</strong>. After this, you click on the Desktop@UCL Anywhere icon to start the service:</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-ucl-desktop-start_4572de6f1f18ef16cf7c3306d6b7e567">
 <div class="cell-output-display">
 <div id="fig-ucl-desktop-start" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/ucl_start.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.2: Starting <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_start.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;2: Starting <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_start.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>It may take a few minutes to load, but after this you should see your normal UCL Windows desktop:</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-ucl-desktop-login-success_dbe14977c53fb9837ad2dd882cd494ae">
 <div class="cell-output-display">
 <div id="fig-ucl-desktop-login-success" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/ucl_login_success.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.3: Your <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_login_success.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;3: Your <a href="https://ucldesktop.cloud.com">Desktop@UCL Anywhere</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/ucl_login_success.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="downloading-crime-data" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="downloading-crime-data"><span class="header-section-number">2.2</span> Downloading crime data</h2>
+<section id="downloading-crime-data" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-crime-data">Downloading crime data</h2>
 <p>For our crime data, we will use data directly from the Police Data Portal, which you can find at <a href="https://data.police.uk/">data.police.uk</a>. This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are <code>45</code> territorial police forces (TPF) and <code>3</code> special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g.&nbsp;the “West Midlands Police Force”), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.</p>
 <p>When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:</p>
 <ul>
@@ -207,111 +201,111 @@ ul.task-list li input[type="checkbox"] {
 <div class="{callout.note}">
 <p>You are free to use a different browser, however, some the steps below on how to download the files may be slightly different.</p>
 </div>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-data-police_03bd0711909b244499dd74b764686637">
 <div class="cell-output-display">
 <div id="fig-data-police" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/data_police.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.4: The landing page of <a href="https://data.police.uk">data.police.uk</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/data_police.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;4: The landing page of <a href="https://data.police.uk">data.police.uk</a>. <a href="https://jtvandijk.github.io/GEOG0014/images/data_police.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Click on <strong>Downloads</strong> and subsequently select <em>November 2021</em> to <em>November 2021</em> as data range and tick the box for the <em>Metropolitan Police Services</em>. With this selection we can now download all crime data recorded by the Metropolitan Police Services for the month of November 2021.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-data-police-select_c4056edfa1cbae63e3949b2865ffcf0d">
 <div class="cell-output-display">
 <div id="fig-data-police-select" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/select_data.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.5: Select the data that we want to download. <a href="https://jtvandijk.github.io/GEOG0014/images/select_data.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;5: Select the data that we want to download. <a href="https://jtvandijk.github.io/GEOG0014/images/select_data.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Make sure that the box in front of <strong>Include crime data</strong> is ticked - it should be ticked by default - and proceed to click on <strong>Generate file</strong>. Once your file is generated you can click on <strong>Download now</strong>.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-data-police-download_e6e4bd72ce501b01946fe970024524f3">
 <div class="cell-output-display">
 <div id="fig-data-police-download" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/download_now.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.6: Donwload the data. <a href="https://jtvandijk.github.io/GEOG0014/images/download_now.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;6: Donwload the data. <a href="https://jtvandijk.github.io/GEOG0014/images/download_now.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Save the file as <code>crime_met_november2021</code> in your <code>Downloads</code> folder.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-data-police-save_b2b8edec3b41812a09dba90785bf9149">
 <div class="cell-output-display">
 <div id="fig-data-police-save" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/save_now.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.7: Save the data. <a href="https://jtvandijk.github.io/GEOG0014/images/save_now.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;7: Save the data. <a href="https://jtvandijk.github.io/GEOG0014/images/save_now.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Your download should be finished within seconds. After downloading the data, go to your <code>Downloads</code> folder and right click on the <code>crime_met_november2021.zip</code> folder and click on <strong>Extract All</strong>. The data, which is in a compressed format (<code>zip</code>), will now be extracted so that we can use it within QGIS.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-data-police-unzip_77d0e2a50d97e98775f57c23f7fc8f7d">
 <div class="cell-output-display">
 <div id="fig-data-police-unzip" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/extract_zip.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.8: Unzip the data. <a href="https://jtvandijk.github.io/GEOG0014/images/extract_zip.png" target="_blank'">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;8: Unzip the data. <a href="https://jtvandijk.github.io/GEOG0014/images/extract_zip.png" target="_blank'">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to <strong>Week 08: Mapping London</strong>.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-moodle-w8_6293f21574ef83dbc931c46f7a2775ff">
 <div class="cell-output-display">
 <div id="fig-moodle-w8" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/moodle.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.9: Geography in the Field II Moodle page. <a href="https://jtvandijk.github.io/GEOG0014/images/moodle.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;9: Geography in the Field II Moodle page. <a href="https://jtvandijk.github.io/GEOG0014/images/moodle.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Under the <strong>Further resources</strong> heading you will see two files: <code>Roads for mapping exercise</code> and <code>Boroughs for mapping exercise</code>. Right click on on the first file and click on <strong>Save link as …</strong>. Give the file the name <code>roads</code> and save to your download folder.</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-moodle-w8-save_fd08bec2a8f5b742522990d9a2cbd6e3">
 <div class="cell-output-display">
 <div id="fig-moodle-w8-save" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/save_as.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.10: Save link as. <a href="https://jtvandijk.github.io/GEOG0014/images/save_as.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;10: Save link as. <a href="https://jtvandijk.github.io/GEOG0014/images/save_as.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-moodle-w8-save-save_01b456cab37c31a7af488f56be535523">
 <div class="cell-output-display">
 <div id="fig-moodle-w8-save-save" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/save_as_save.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.11: Save file to your downloads folder. <a href="https://jtvandijk.github.io/GEOG0014/images/select_data.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;11: Save file to your downloads folder. <a href="https://jtvandijk.github.io/GEOG0014/images/select_data.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Right click on on the second file and click on <strong>Save link as …</strong>. Give the file the name <code>boroughs</code> and save to your download folder.</p>
 <p>After downloading both files, go to your <code>Downloads</code> folder and make sure both are extracted. Your <code>Downloads</code> folder should look something like this:</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-your-downloads_690c74b0fdd498f8f401705694f51651">
 <div class="cell-output-display">
 <div id="fig-your-downloads" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/all_download.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.12: Your download folder should now contain three <strong>unzipped</strong> folders containing our crime data, our borough data and our road data. <a href="https://jtvandijk.github.io/GEOG0014/images/all_download.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;12: Your download folder should now contain three <strong>unzipped</strong> folders containing our crime data, our borough data and our road data. <a href="https://jtvandijk.github.io/GEOG0014/images/all_download.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>The final step we need to take is to copy our downloaded data to a new folder. In your <code>Documents</code> folder, create a new folder <code>GEOG0014_W08</code>. We will use this folder as our <em>working directory</em>. Now move the three folders containg the crime data, borough data and road data that you unzipped from your <code>Downloads</code> folder to this new <code>GEOG0014_W08</code> folder. Your <em>working directory</em> should look like this:</p>
-<div class="cell">
+<div class="cell" data-hash="data-prep_cache/html/fig-wd_878cb4dadd48f889a1b3113037eed848">
 <div class="cell-output-display">
 <div id="fig-wd" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/wd.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.13: Your working directory is now all set up. <a href="https://jtvandijk.github.io/GEOG0014/images/wd.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;13: Your working directory is now all set up. <a href="https://jtvandijk.github.io/GEOG0014/images/wd.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
@@ -329,6 +323,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -352,6 +347,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -411,57 +521,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -619,17 +678,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Mapping London?</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Mapping London?</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./map-crime.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data mapping</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">Data mapping</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Course material by <a href="https://www.mappingdutchman.com">Justin van Dijk</a>. Available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
