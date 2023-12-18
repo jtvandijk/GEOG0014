@@ -330,7 +330,7 @@ In this exercise we have downloaded some data, created a spatial data object by 
 #| echo: false
 knitr::include_graphics('images/add_map.png')
 ```
-<br />
+
 - Draw a box on the canvas. The crime map should now appear.
 - Using the toolbar on the left hand side, there is several other options such as **Add scale bar**, **Add North Arrow**, and **Add Legend**. *There are lots of options to play around with!*
 - Once you are happy with your map, you can save your map by going to **Layout** > **Export as Image ...**. If you get a message popping up saying something about "Project Contains WMS Layers" just click on **Close**. Navigate to your *working directory*, give your map a name and click **Save**. Also click **Save** on the next window that pops up.

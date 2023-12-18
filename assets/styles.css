@@ -1,7 +1,11 @@
   :root {
-    --main-color: #D76455;
-    --main-color-hover: #d14e3d;
-    --accent-color: #7ACDCD;
+    --main-color: #df8377;
+    --main-color-hover: #df8377;
+    --accent-color: #df8377;
+}
+
+main p {
+  text-align: justify;
 }
 
 a {

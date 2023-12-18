@@ -1,7 +1,9 @@
 # Data preparation
 
 ## Getting started
-Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html), but today we will be using the open-source GIS software suite [QGIS](https://www.qgis.org/en/site/). A copy of [QGIS](https://www.qgis.org/en/site/) comes pre-installed on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere). Desktop\@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop\@UCL Anywhere service to ensure that everyone uses the same version.
+Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html) or at very least have been introduced to [ArcGIS Online](https://www.arcgis.com/index.html) in Geography in the Field 1, but today we will be using the open-source GIS software suite [QGIS](https://www.qgis.org/en/site/). 
+
+A copy of [QGIS](https://www.qgis.org/en/site/) comes pre-installed on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere). Desktop\@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop\@UCL Anywhere service to ensure that everyone uses the same version.
 
 Let's get started by opening an internet browser such as [Google Chrome](https://www.google.co.uk/chrome/?brand=FHFK&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&gclsrc=aw.ds) or [Microsoft Edge](https://www.microsoft.com/en-us/edge). Now navigate to: [https://ucldesktop.cloud.com](https://ucldesktop.cloud.com).
 
@@ -31,7 +33,7 @@ knitr::include_graphics('images/ucl_login_success.png')
 ```
 
 ## Downloading crime data
-For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are `45` territorial police forces (TPF) and `3` special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the "West Midlands Police Force"), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the Area of Interest (AOI) for our investigation.
+For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are `45` territorial police forces (TPF) and `3` special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the "West Midlands Police Force"), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the area of interest for our investigation.
 
 When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:
 

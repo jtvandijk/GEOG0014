@@ -18,10 +18,10 @@ format:
     toc: true
     smooth-scroll: true
     highlight-style: atom-one
+    pagetitle: "{{< var meta.title >}}"
 
 website:
   repo-url: https://github.com/jtvandijk/GEOG0014
-  # favicon: assets/favicon.png
   repo-actions: [issue]
   page-navigation: true
   page-footer:
@@ -41,7 +41,6 @@ website:
       - data-prep.qmd
       - map-crime.qmd
       - worksheet.qmd
-
 
 # misc
 title-block-banner: false
