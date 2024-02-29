@@ -1,7 +1,7 @@
 # Data mapping
 
 ## Starting QGIS
-Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on **QGIS Desktop 3.16** to open the software. 
+Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on **QGIS Desktop 3.28** to open the software. 
 
 ::: {.callout-warning}
 Do not use QGIS 2.18 as the steps in this tutorial will not work!
@@ -9,7 +9,7 @@ Do not use QGIS 2.18 as the steps in this tutorial will not work!
 
 ```{r}
 #| label: fig-open-qgis
-#| fig.cap: "Open **QGIS Desktop 3.16.11**.  [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/open_qgis.png){target='_blank'}"
+#| fig.cap: "Open **QGIS Desktop 3.28**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/open_qgis.png){target='_blank'}"
 #| echo: false
 knitr::include_graphics('images/open_qgis.png')
 ```
@@ -55,7 +55,7 @@ knitr::include_graphics('images/roads_loaded.png')
 
 Now repeat these steps for our `boroughs` file, making sure again that inside your `boroughs` folder you select the boroughs file with the `SHP File` type. You now will have both data loaded, although the `boroughs` layer will be drawn on top of your `roads` layer. 
 
-::: {.callout.note}
+::: {.callout-note}
 QGIS randomly picks a colour when a map layer is first loaded, so the colours of your `roads` and `boroughs` file may be different than the ones shown in the screenshots.
 :::
 
@@ -122,7 +122,7 @@ Now we know what we are dealing with, we can load our crime data into QGIS. To d
 - Click on the three dots (*...*) next to the **File name** box and navigate to your *working directory*. Then go into your `crime_met_november2021` folder, your `2021-11` folder, and **Open** the `2021-11-metropolitan-street` file.
 - Under **Geometry Definitions** make sure that **X field** is set to `Longitude` and **Y field** is set to `Latitude`. Here we inform QGIS that we are dealing with locations.
 - Without going into further details, we need to tell QGIS which [map projection](https://en.wikipedia.org/wiki/Map_projection) was used to record the crime locations. By specifying a [map projection](https://en.wikipedia.org/wiki/Map_projection) QGIS will know how to plot the crime locations in their correct positions. To do so, still under the **Geometry Definitions** tab, click on the **Select CRS** button. You will find this is directly next to the *invalid projection* message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
-- Now click **Add**. *This may take a little bit of time!*. Click **Close** to exit the dialog box.
+- Now click **Add**. *This may take a little bit of time!* Click **Close** to exit the dialog box.
 
 The **GIF** below summarises these steps:
 
@@ -266,10 +266,10 @@ knitr::include_graphics('images/hot_crime.gif')
 ```
 
 ::: {.callout-tip}
-The resulting map is relatively dark. For your [worksheet assignment](#worksheet) you may want to select a different colour ramp or you may try to edit the **Magma** colour ramp by setting the first colour of the **Color ramp** transparent: instead of changing the **Color ramp** to **Magma**, select the **Edit Color Ramp ...** option. Here you can set **Color 1** to **Transparent**. You can also adjust the colours by playing around with the **Gradient Stops** in the same menu. Once you are happy with the changes you have made to the colour palette click **OK**. Then click **Apply** followed by **OK** to exit the menu.     
+The resulting map is relatively dark. For your [worksheet assignment](worksheet.html) you may want to select a different colour ramp or you may try to edit the **Magma** colour ramp by setting the first colour of the **Color ramp** transparent: instead of changing the **Color ramp** to **Magma**, select the **Edit Color Ramp ...** option. Here you can set **Color 1** to **Transparent**. You can also adjust the colours by playing around with the **Gradient Stops** in the same menu. Once you are happy with the changes you have made to the colour palette click **OK**. Then click **Apply** followed by **OK** to exit the menu.     
 :::
 
-But what if we only want to create a density map only for a given crime type such as *anti-social behaviour*, we can do that as follows:
+But what if we only want to create a density map only for a given crime type such as *anti-social behaviour*? We can do that as follows:
 
 - Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Open Attribute Table**.
 - In the **Attribute Table** click on the button that says **Select Features Using Expression**:
@@ -280,7 +280,7 @@ But what if we only want to create a density map only for a given crime type suc
 #| echo: false
 knitr::include_graphics('images/select_exp.png')
 ```
-<br />
+
 - Double click on `Crime type` in the **Fields and Values** drop-down menu. The `crime type` variable now gets added to the **Expression**.
 - Directly next to the `"Crime type"` part of the expression type `=`.
 - Now click on the **All Unique** button to get all unique values that are stored in the `crime type` variable. Double click on *Anti-social behaviour* to add this to the expression.
@@ -347,5 +347,5 @@ knitr::include_graphics('images/export_map.gif')
 This image is now ready to be used outside QGIS.
 
 ::: {.callout-tip}
-There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on [Using the Print Layout](https://docs.qgis.org/3.22/en/docs/training_manual/map_composer/map_composer.html) and QGIS manual on [Laying out maps](https://docs.qgis.org/3.22/en/docs/user_manual/print_composer/index.html).
+The map that we have created now requires some TLC on the styling front. There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on [Using the Print Layout](https://docs.qgis.org/3.28/en/docs/training_manual/map_composer/map_composer.html) and QGIS manual on [Laying out maps](https://docs.qgis.org/3.28/en/docs/user_manual/print_composer/index.html).
 :::

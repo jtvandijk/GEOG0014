@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Data mapping</h1>
 <section id="starting-qgis" class="level2">
 <h2 class="anchored" data-anchor-id="starting-qgis">Starting QGIS</h2>
-<p>Now we have downloaded and organised our data, we can open <a href="https://www.qgis.org/en/site/">QGIS</a>. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on <strong>QGIS Desktop 3.16</strong> to open the software.</p>
+<p>Now we have downloaded and organised our data, we can open <a href="https://www.qgis.org/en/site/">QGIS</a>. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on <strong>QGIS Desktop 3.28</strong> to open the software.</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -171,18 +171,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div class="cell" data-hash="map-crime_cache/html/fig-open-qgis_193162679cfe1f4d3540c188fbc87914">
+<div class="cell" data-hash="map-crime_cache/html/fig-open-qgis_9cc39455feea860535243fda60518520">
 <div class="cell-output-display">
 <div id="fig-open-qgis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/open_qgis.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Open <strong>QGIS Desktop 3.16.11</strong>. <a href="https://jtvandijk.github.io/GEOG0014/images/open_qgis.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;1: Open <strong>QGIS Desktop 3.28</strong>. <a href="https://jtvandijk.github.io/GEOG0014/images/open_qgis.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>It may take a little while before QGIS has started, so be patient. In some cases Desktop@UCL Anywhere fails to start QGIS on the first attempt, you may have to give it several attempts. Once QGIS has started, you will see the QGIS interface:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-interface-qgis_4b95d89da2b090b0d78ff866527a5a67">
+<div class="cell" data-hash="map-crime_cache/html/fig-interface-qgis_6c0166d090bbb5638f08f303cee5c27b">
 <div class="cell-output-display">
 <div id="fig-interface-qgis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -197,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="loading-spatial-data" class="level2">
 <h2 class="anchored" data-anchor-id="loading-spatial-data">Loading spatial data</h2>
 <p>We can now start by adding our spatial data. We will start by adding our <code>roads</code> layer. Click on <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Vector Layer …</strong>.</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-add-vector_db8981f995e3eb9b66c11864d2921bca">
+<div class="cell" data-hash="map-crime_cache/html/fig-add-vector_5310f78f01c3d6dd99ad53ad951e4f12">
 <div class="cell-output-display">
 <div id="fig-add-vector" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Click on the three dots (<strong>…</strong>) next to the <strong>Vector Dataset(s)</strong> box and navigate to your <em>working directory</em>. Then go into your <code>roads</code> folder and click on the roads file with the <code>SHP File</code> type. This is the roads <code>shapefile</code> that we want.</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-add-shp_ca91f62da2cc7da332420af99b7362d7">
+<div class="cell" data-hash="map-crime_cache/html/fig-add-shp_55da102c95dd446e05e71d2c3a5fdb1d">
 <div class="cell-output-display">
 <div id="fig-add-shp" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a message popping up saying something about “Select Transformations for roads” just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-roads-loaded_b27c1d32450c7d1a908a335715b4a963">
+<div class="cell" data-hash="map-crime_cache/html/fig-roads-loaded_1787beeceb4551bcce46019b88b29963">
 <div class="cell-output-display">
 <div id="fig-roads-loaded" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -230,10 +230,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Now repeat these steps for our <code>boroughs</code> file, making sure again that inside your <code>boroughs</code> folder you select the boroughs file with the <code>SHP File</code> type. You now will have both data loaded, although the <code>boroughs</code> layer will be drawn on top of your <code>roads</code> layer.</p>
-<div class="callout.note">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>QGIS randomly picks a colour when a map layer is first loaded, so the colours of your <code>roads</code> and <code>boroughs</code> file may be different than the ones shown in the screenshots.</p>
 </div>
-<div class="cell" data-hash="map-crime_cache/html/fig-bor-loaded_4465e2cb84b778a688f3c4d8286fa60d">
+</div>
+</div>
+<div class="cell" data-hash="map-crime_cache/html/fig-bor-loaded_589beb7a3eb345ac46ee0f7318ba4ca6">
 <div class="cell-output-display">
 <div id="fig-bor-loaded" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -247,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="organising-our-layers" class="level2">
 <h2 class="anchored" data-anchor-id="organising-our-layers">Organising our layers</h2>
 <p>Now we have our first set of data loaded, we can reorganise them a little. In the <strong>Layers</strong> panel, we can drag the <code>roads</code> layer on top of the <code>boroughs</code> layer to change the drawing order. We can also zoom to a layer’s full extent (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Zoom to Layer</strong>), change a layer’s colour (right click on <code>roads</code> or <code>boroughs</code> &gt; <strong>Properties …</strong> &gt; change the colour under the <strong>Symbology</strong> tab), and zoom in and out of the map by scrolling:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-organise-data_88ae57c90422a3e124deee1163eeae6c">
+<div class="cell" data-hash="map-crime_cache/html/fig-organise-data_7d98699ed8dfa1eb52320be377cfb400">
 <div class="cell-output-display">
 <div id="fig-organise-data" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -258,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Before doing anything else, now would be a good time to save our QGIS project. Go to <strong>Project</strong> &gt; <strong>Save as</strong> and save your file in your <em>working directory</em> as <code>crime_map</code>.</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-save-project_e1461c6a42a10bcd52127cc9535023c1">
+<div class="cell" data-hash="map-crime_cache/html/fig-save-project_8a1e87767ebca87806bc8727500cc818">
 <div class="cell-output-display">
 <div id="fig-save-project" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -283,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Navigate to your <code>working directory</code> and go to <code>crime_met_november2021</code> &gt; <code>2021_11</code>. Now open the <code>2011-11-metropolitan-street</code> file using Excel.</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-inspect-data_810a928ef5123dbb1666cbb1c4273a1d">
+<div class="cell" data-hash="map-crime_cache/html/fig-inspect-data_fdbd38354e9014cb7a84eb4333548b69">
 <div class="cell-output-display">
 <div id="fig-inspect-data" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -342,10 +349,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Click on the three dots (<em>…</em>) next to the <strong>File name</strong> box and navigate to your <em>working directory</em>. Then go into your <code>crime_met_november2021</code> folder, your <code>2021-11</code> folder, and <strong>Open</strong> the <code>2021-11-metropolitan-street</code> file.</li>
 <li>Under <strong>Geometry Definitions</strong> make sure that <strong>X field</strong> is set to <code>Longitude</code> and <strong>Y field</strong> is set to <code>Latitude</code>. Here we inform QGIS that we are dealing with locations.</li>
 <li>Without going into further details, we need to tell QGIS which <a href="https://en.wikipedia.org/wiki/Map_projection">map projection</a> was used to record the crime locations. By specifying a <a href="https://en.wikipedia.org/wiki/Map_projection">map projection</a> QGIS will know how to plot the crime locations in their correct positions. To do so, still under the <strong>Geometry Definitions</strong> tab, click on the <strong>Select CRS</strong> button. You will find this is directly next to the <em>invalid projection</em> message. In the <strong>Filter</strong> box type: <code>EPSG 4326</code>. Only one option should show up: <code>WGS 84</code>. Select this option and click <strong>OK</strong>.</li>
-<li>Now click <strong>Add</strong>. <em>This may take a little bit of time!</em>. Click <strong>Close</strong> to exit the dialog box.</li>
+<li>Now click <strong>Add</strong>. <em>This may take a little bit of time!</em> Click <strong>Close</strong> to exit the dialog box.</li>
 </ul>
 <p>The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-load-crime-data_b09e6cf1b4ac3e7909ed75971f52af97">
+<div class="cell" data-hash="map-crime_cache/html/fig-load-crime-data_dbf86c81f20608567431a30678441ee5">
 <div class="cell-output-display">
 <div id="fig-load-crime-data" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -356,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the <code>roads</code> layer and opting for <strong>Zoom to Layer</strong>:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-crime-ci_d5db09e06a5219f9d436e99684f151f7">
+<div class="cell" data-hash="map-crime_cache/html/fig-crime-ci_97feecfadee50d70a01898cafbcafc62">
 <div class="cell-output-display">
 <div id="fig-crime-ci" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -375,7 +382,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
 <li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br><br></li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/select-features_876cb776876eaac2bd87633aae83f5ab">
+<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/select-features_9e7a044ddda61a4285b9eeed47ce8554">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -402,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
 <li>A new layer should now appear and you can untick the box next to the <code>boroughs</code> layer.</li>
 </ul>
 <p>The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-select-boroughs_07e7c65c6445c3580a8bb52f32e76dbf">
+<div class="cell" data-hash="map-crime_cache/html/fig-select-boroughs_66e455be28ea16893e4fbaa8d27cfdf4">
 <div class="cell-output-display">
 <div id="fig-select-boroughs" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -420,7 +427,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Click <strong>Run</strong>. <em>This may take a few seconds.</em> Once the process is done, you can click <strong>Close</strong>.</li>
 </ul>
 <p>We now have successfully ‘clipped’ the crimes that occurred within the boundaries of Camden and Islington. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-select-crimes_afca395d41dbb9f6c3d5d138a9cef334">
+<div class="cell" data-hash="map-crime_cache/html/fig-select-crimes_acf8ca831541ad1de22f6391855ab63c">
 <div class="cell-output-display">
 <div id="fig-select-crimes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -431,7 +438,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Before moving to our visualisation, we can remove the <code>2011-11-metropolitan-street</code> layer by right clicking on the <code>layer</code> in the <strong>Layers</strong> panel and opting for <strong>Remove Layer…</strong>. We can do the same for the <code>boroughs</code> layer. Our QGIS screen should now look something like this:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-ready-4-vis_c9b5a35828b8d6febea6d0d54b4db5bd">
+<div class="cell" data-hash="map-crime_cache/html/fig-ready-4-vis_c61c17f1573e9bb2d9a88c87ad35fb1e">
 <div class="cell-output-display">
 <div id="fig-ready-4-vis" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -472,7 +479,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-adding-basemap_1a27c948e6b740d719a7de2db5732d1e">
+<div class="cell" data-hash="map-crime_cache/html/fig-adding-basemap_9feecf6082baed86da49c8a42bd962c8">
 <div class="cell-output-display">
 <div id="fig-adding-basemap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -490,7 +497,7 @@ ul.task-list li input[type="checkbox"] {
 <li>At the bottom of the menu click on <strong>Classify</strong>. All the different crime types now appear, with each their own symbol. Click <strong>Apply</strong> andExpression click <strong>OK</strong>.</li>
 </ul>
 <p>The QGIS screen now shows a colour for each crime type. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-colour-crimes_707a64d0e24b7a9d3cc96ed9dd37903d">
+<div class="cell" data-hash="map-crime_cache/html/fig-colour-crimes_543275a87e9fc15acd6f0ed9ccebd28c">
 <div class="cell-output-display">
 <div id="fig-colour-crimes" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -501,7 +508,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>In the <strong>Layers</strong> panel, you can now expand the <code>cam_is_clip</code> layer and switch on and off individual crime types by ticking or unticking their respective boxes:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-one-crime_5871e0cb984182a9230d6057cf597e72">
+<div class="cell" data-hash="map-crime_cache/html/fig-one-crime_b334809eb6eba124e00234b75682a114">
 <div class="cell-output-display">
 <div id="fig-one-crime" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -519,7 +526,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Under <strong>Layer Rendering</strong> set the <strong>Opacity</strong> to 60%, so to blend the heatmap with the OSM basemap. Click <strong>Apply</strong>. <em>This may take a few seconds.</em> Then click <strong>OK</strong>.</li>
 </ul>
 <p>We now have created a rather nice visualisation of all crime in Camden and Islington. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-hot-crime_438c9b5023d4ed2f4b068d486d334159">
+<div class="cell" data-hash="map-crime_cache/html/fig-hot-crime_c99e4327cb3b928127a682c4151b1134">
 <div class="cell-output-display">
 <div id="fig-hot-crime" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -535,16 +542,16 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The resulting map is relatively dark. For your <a href="#worksheet">worksheet assignment</a> you may want to select a different colour ramp or you may try to edit the <strong>Magma</strong> colour ramp by setting the first colour of the <strong>Color ramp</strong> transparent: instead of changing the <strong>Color ramp</strong> to <strong>Magma</strong>, select the <strong>Edit Color Ramp …</strong> option. Here you can set <strong>Color 1</strong> to <strong>Transparent</strong>. You can also adjust the colours by playing around with the <strong>Gradient Stops</strong> in the same menu. Once you are happy with the changes you have made to the colour palette click <strong>OK</strong>. Then click <strong>Apply</strong> followed by <strong>OK</strong> to exit the menu.</p>
+<p>The resulting map is relatively dark. For your <a href="worksheet.html">worksheet assignment</a> you may want to select a different colour ramp or you may try to edit the <strong>Magma</strong> colour ramp by setting the first colour of the <strong>Color ramp</strong> transparent: instead of changing the <strong>Color ramp</strong> to <strong>Magma</strong>, select the <strong>Edit Color Ramp …</strong> option. Here you can set <strong>Color 1</strong> to <strong>Transparent</strong>. You can also adjust the colours by playing around with the <strong>Gradient Stops</strong> in the same menu. Once you are happy with the changes you have made to the colour palette click <strong>OK</strong>. Then click <strong>Apply</strong> followed by <strong>OK</strong> to exit the menu.</p>
 </div>
 </div>
 </div>
-<p>But what if we only want to create a density map only for a given crime type such as <em>anti-social behaviour</em>, we can do that as follows:</p>
+<p>But what if we only want to create a density map only for a given crime type such as <em>anti-social behaviour</em>? We can do that as follows:</p>
 <ul>
 <li>Right click on the <code>cam_is_clip</code> layer in the <strong>Layers</strong> panel and click on <strong>Open Attribute Table</strong>.</li>
 <li>In the <strong>Attribute Table</strong> click on the button that says <strong>Select Features Using Expression</strong>: <br><br></li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/select-features-expression_1cdea51997ffac4624a76ace803557ed">
+<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/select-features-expression_422175c0454f1d7e49ab29135a5736af">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -553,7 +560,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><br> - Double click on <code>Crime type</code> in the <strong>Fields and Values</strong> drop-down menu. The <code>crime type</code> variable now gets added to the <strong>Expression</strong>. - Directly next to the <code>"Crime type"</code> part of the expression type <code>=</code>. - Now click on the <strong>All Unique</strong> button to get all unique values that are stored in the <code>crime type</code> variable. Double click on <em>Anti-social behaviour</em> to add this to the expression. - Click on <strong>select Features</strong> and <strong>Close</strong> the dialogue box and the <strong>Attribute Table</strong>. The selected crimes should now show up in yellow.</p>
+<ul>
+<li>Double click on <code>Crime type</code> in the <strong>Fields and Values</strong> drop-down menu. The <code>crime type</code> variable now gets added to the <strong>Expression</strong>.</li>
+<li>Directly next to the <code>"Crime type"</code> part of the expression type <code>=</code>.</li>
+<li>Now click on the <strong>All Unique</strong> button to get all unique values that are stored in the <code>crime type</code> variable. Double click on <em>Anti-social behaviour</em> to add this to the expression.</li>
+<li>Click on <strong>select Features</strong> and <strong>Close</strong> the dialogue box and the <strong>Attribute Table</strong>. The selected crimes should now show up in yellow.</li>
+</ul>
 <p>Just as we did before with our two boroughs, we can export our selection to a new <code>shapefile</code>:</p>
 <ul>
 <li>Right click on the <code>cam_is_clip</code> layer in the <strong>Layers</strong> panel &gt; <strong>Export</strong> &gt; <strong>Save Selected Features As …</strong>.</li>
@@ -562,7 +574,7 @@ ul.task-list li input[type="checkbox"] {
 <li>A new layer should now appear and you can untick the box next to the <code>cam_is_clip</code> layer.</li>
 </ul>
 <p>Once you have a new layer, you can update the symbology again to create a <strong>heatmap</strong>. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-hot-crime-asb_6cc451708467568bc645079c2fbc2c69">
+<div class="cell" data-hash="map-crime_cache/html/fig-hot-crime-asb_40da27ee1eb9424757ff313b58a47b14">
 <div class="cell-output-display">
 <div id="fig-hot-crime-asb" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -582,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Under the <strong>Symbology</strong> tab we can make some adjustments to the <strong>Simple Fill</strong> settings: in this case we can set the <strong>Fill style</strong> to <strong>No brush</strong>. We can also make the outline thicker by increasing the <strong>Stroke width</strong>. Once this is done click <strong>Apply</strong> followed by <strong>OK</strong>.</li>
 </ul>
 <p>The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-bor-out_fcc2f899570837ec08c331833229f49d">
+<div class="cell" data-hash="map-crime_cache/html/fig-bor-out_c5ca43afd0d13b706cdba482b623b013">
 <div class="cell-output-display">
 <div id="fig-bor-out" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -598,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Give it a name, e.g.&nbsp;<code>crime_asb</code>.</li>
 <li>A new window opens up. In the toolbar on the left hand side, click on the <strong>Add map</strong> button: <br><br></li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/add-map_88beebced308299b294c2d49189b5a7d">
+<div class="cell" data-layout-align="center" data-hash="map-crime_cache/html/add-map_8972844d36ff97f3d5b03f2602498d95">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -613,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Once you are happy with your map, you can save your map by going to <strong>Layout</strong> &gt; <strong>Export as Image …</strong>. If you get a message popping up saying something about “Project Contains WMS Layers” just click on <strong>Close</strong>. Navigate to your <em>working directory</em>, give your map a name and click <strong>Save</strong>. Also click <strong>Save</strong> on the next window that pops up.</li>
 </ul>
 <p>These steps should create an image which you should be able to find in your <em>working directory</em>. The <strong>GIF</strong> below summarises these steps:</p>
-<div class="cell" data-hash="map-crime_cache/html/fig-export-map_5c22bf2ba357ce896c7b7e4bd913dc99">
+<div class="cell" data-hash="map-crime_cache/html/fig-export-map_38e1e2acc799afac41d75baee591abd3">
 <div class="cell-output-display">
 <div id="fig-export-map" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -630,7 +642,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on <a href="https://docs.qgis.org/3.22/en/docs/training_manual/map_composer/map_composer.html">Using the Print Layout</a> and QGIS manual on <a href="https://docs.qgis.org/3.22/en/docs/user_manual/print_composer/index.html">Laying out maps</a>.</p>
+<p>The map that we have created now requires some TLC on the styling front. There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on <a href="https://docs.qgis.org/3.28/en/docs/training_manual/map_composer/map_composer.html">Using the Print Layout</a> and QGIS manual on <a href="https://docs.qgis.org/3.28/en/docs/user_manual/print_composer/index.html">Laying out maps</a>.</p>
 </div>
 </div>
 </div>
