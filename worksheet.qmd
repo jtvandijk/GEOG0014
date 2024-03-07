@@ -16,7 +16,7 @@ For your visit: **make sure that you visit as a group during the scheduled Frida
 
 ## Part II: Your allocated street
 1.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
-2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a map for all crime around your street in **November 2020** and **November 2022**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a map for all crime around your street in **November 2022** and **November 2023**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
 3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other **existing** data sets might be useful as part of research into investigating crime in London? 
 
 :::{.callout-tip}
