@@ -1,6 +1,6 @@
 # GEOG0014 Geography in the Field II
 
-This GitHub repository generates the GEOG0014 Geography in the Field II Week 8 worksheet for the 2024-2025 academic year which can be found at: https://jtvandijk.github.io/GEOG0014_20232024/
+This GitHub repository generates the GEOG0014 Geography in the Field II Week 8 worksheet for the 2024-2025 academic year which can be found at: https://jtvandijk.github.io/GEOG0014/
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].

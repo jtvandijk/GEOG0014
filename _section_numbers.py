@@ -33,11 +33,11 @@ for htmlf in html_files:
     cnt += 1
     
     # update TOC chapter 1
-    html_content = html_content.replace('<span class="menu-text">Data Preparation</span>', \
-                                        '<span class="menu-text">1 Data Preparation</span>')
+    html_content = html_content.replace('<span class="menu-text">Data preparation</span>', \
+                                        '<span class="menu-text">1 Data preparation</span>')
     # update TOC chapter 2
-    html_content = html_content.replace('<span class="menu-text">Data Mapping</span>', \
-                                        '<span class="menu-text">2 Data Mapping</span>')
+    html_content = html_content.replace('<span class="menu-text">Data mapping</span>', \
+                                        '<span class="menu-text">2 Data mapping</span>')
     # update TOC chapter 3
     html_content = html_content.replace('<span class="menu-text">Worksheet</span>', \
                                         '<span class="menu-text">3 Worksheet</span>')
