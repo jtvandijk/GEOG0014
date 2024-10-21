@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "9a61a3e7"
+  },
+  "data-prep.qmd": {
+    "data-prep.html": "e22d730d"
+  },
+  "01-data-prep.qmd": {
+    "01-data-prep.html": "525de513"
+  },
+  "03-worksheet.qmd": {
+    "03-worksheet.html": "bad2101f"
+  },
+  "02-map-crime.qmd": {
+    "02-map-crime.html": "310aae0c"
+  }
+}

@@ -1,0 +1,49 @@
+# Worksheet 
+Excellent. You have worked through the steps in this computer tutorial on [downloading](data-prep.html) and [mapping](map-crime.html) crime data, you need to conduct the following analysis **as a group**:
+
+## Part I: Camden and Islington 
+1.	Using what you have learnt in the computer tutorial, create two maps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*. 
+2.	There are a number of crime **hot spots** for *anti-social behaviour* and *theft from person* that appear near UCL (particularly around Kings Cross Station). Visit one of these areas and note down the features that distinguish them from their surrounding lower crime areas. 
+3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
+
+::: {.callout-tip}
+This part of the assignment focuses on *anti-social behaviour* and *theft from person* in Camden and Islington.
+:::
+
+::: {.callout-warning}
+For your visit: **make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](https://ucl-eu-west-2-moodle-sitedata.s3.eu-west-2.amazonaws.com/27/2f/272f60435de9fa41eaf89d0de2ff1a6d63010245?response-content-disposition=inline%3B%20filename%3D%22%20GiFII%20risk%20assessment.pdf%22&response-content-type=application%2Fpdf&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA47YHZF637GKGWUJC%2F20240229%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240229T104659Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21541&X-Amz-Signature=c086f824a8e007c022701ae5f24dd6d4d39728832383d9bb0f96ab1e946a9ece)**. Check the weather forecast and prepare accordingly. 
+:::
+
+## Part II: Your allocated street
+1.	Using the full crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2021**?
+2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a map for all crime around your street in **November 2022** and **November 2023**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types differ over the course of the years?
+3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross what other **existing** data sets might be useful as part of research into investigating crime in London? 
+
+:::{.callout-tip}
+This part of the assignment focuses on *all types* of crime in your allocated street.
+:::
+
+:::{.callout-note}
+If your allocated street falls outside, or on the administrative borders of, Camden and Islington but you would like to incorporate a road network in your map, you can download the full road network for London here as a `zip` file: [[Link]](https://github.com/jtvandijk/GEOG0014/blob/master/data/AllRoads.zip). Please do note that this file is significantly larger than the `roads` file that we have used so far, so you may encounter some performance issues.
+:::
+
+## Worksheet submission
+Please submit your answers to the questions above in the form of a short **group** report. The report should include:
+
+- No more than **500** words.
+- Maximum **4** maps, and, if using, a maximum of **2** photographs.
+- Do not forget to include references.
+
+You can find the submission link for this final worksheet task on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=38481):
+
+- One submission per group. Make sure to include the [group work coversheet](https://moodle.ucl.ac.uk/pluginfile.php/6848630/mod_label/intro/GEOG0014%20Geography%20in%20the%20Field%20II_Groupwork_coversheet.docx) in your submission and you follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/course/view.php?id=38481). 
+- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 18 March**, using the Turnitin link on the course [Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=38481) *GEOG0014 Worksheet 4 London mapping*.
+- Please submit the worksheet as a `Word` or `PDF` document, no larger than 40 MB.
+- Do check that the file has uploaded and displays correctly. 
+
+:::{.callout-warning}
+Only one member of each group should submit the report, following the instructions on Moodle.
+:::
+
+## Further questions
+Any questions about these tasks please use the W08 forum on [Moodle](https://moodle.ucl.ac.uk/course/view.php?id=38481). [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)

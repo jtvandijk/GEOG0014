@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: en
+
+execute:
+  freeze: false
+  cache: false
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark:  darkly
+    callout-appearance: simple
+    css: assets/styles.css
+    toc: true
+    smooth-scroll: true
+    highlight-style: atom-one
+    number-sections: true
+    number-depth: 4
+    pagetitle: "{{< var meta.title >}}"
+
+website:
+  repo-url: https://github.com/jtvandijk/GEOG0014
+  repo-actions: [issue]
+  page-navigation: true
+  page-footer:
+    center: "Course material by [Justin van Dijk](https://www.mappingdutchman.com). Available under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
+  search:
+    location: sidebar
+    type: overlay
+  sidebar:
+    style: floating
+    collapse-level: 2
+    logo: assets/logo.svg
+    tools:
+      - icon: github
+        href: https://github.com/jtvandijk/GEOG0014
+    contents:
+      - section: "Welcome"
+        contents:
+          - text: "Mapping London"
+            file: index.qmd
+      - section: "Crime in London"
+        contents:
+          - 01-data-prep.qmd
+          - 02-map-crime.qmd
+          - 03-worksheet.qmd
+
+# misc
+title-block-banner: false
+editor: source
+

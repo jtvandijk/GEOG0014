@@ -1,0 +1,146 @@
+# Data preparation
+This week we will be mapping **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). The data we will be working with for this week's task are downloaded from the [data.police.uk](https://data.police.uk/) website. 
+
+::: {.callout-warning}
+You are expected to work through the following computer tutorial individually, but you will submit this week's worksheet as a **group**.
+:::
+
+## Getting started
+Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html) or at very least have been introduced to [ArcGIS Online](https://www.arcgis.com/index.html) in Geography in the Field 1, but today we will be using the open-source GIS software suite [QGIS](https://www.qgis.org/en/site/). 
+
+A copy of [QGIS](https://www.qgis.org/en/site/) comes pre-installed on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere). Desktop\@UCL Anywhere is a service that allows remote access to UCL resources for staff and students. All you need is a valid UCL user ID and password, an internet connection and supported web browser. Today we will be using this Desktop\@UCL Anywhere service to ensure that everyone uses the same version.
+
+Let's get started by opening an internet browser such as [Google Chrome](https://www.google.co.uk/chrome/?brand=FHFK&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc26lB3ONziz2KnCd7Ac1MVjTx66n0Ull4R8oiQqzXzgKnJSqRCwK60aAhmFEALw_wcB&gclsrc=aw.ds) or [Microsoft Edge](https://www.microsoft.com/en-us/edge). Now navigate to: [https://ucldesktop.cloud.com](https://ucldesktop.cloud.com).
+
+```{r} 
+#| label: fig-ucl-desktop-login
+#| fig.cap: "[Desktop@UCL Anywhere](https://ucldesktop.cloud.com) login interface. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/ucl_login.png){target='_blank'}"
+#| echo: FALSE
+knitr::include_graphics('images/ucl_login.png')
+```
+
+You can log in with your normal **UCL username** and **UCL password**. After this, you click on the Desktop\@UCL Anywhere icon to start the service:
+
+```{r}
+#| label: fig-ucl-desktop-start
+#| fig.cap: "Starting [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/ucl_start.png){target='_blank'}"
+#| echo: FALSE
+knitr::include_graphics('images/ucl_start.png')
+```
+
+It may take a few minutes to load, but after this you should see your normal UCL Windows desktop:
+
+```{r} 
+#| label: fig-ucl-desktop-login-success
+#| fig.cap: "Your [Desktop@UCL Anywhere](https://ucldesktop.cloud.com). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/ucl_login_success.png){target='_blank'}"
+#| echo: FALSE
+knitr::include_graphics('images/ucl_login_success.png')
+```
+
+## Downloading crime data
+For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the U.K. across different the different police forces. In total, there are `45` territorial police forces (TPF) and `3` special police forces (SPF) of the United Kingdom. Each TPF covers a specific area in the UK (e.g. the "West Midlands Police Force"), whilst the SPFs are cross-jurisdiction and cover specific types of crime, such as the British Transport Police. Therefore, when we want to download data for a specific area, we need to know which Police Force covers the area of interest for our investigation.
+
+When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:
+
+- *The Metropolitan Police Force*, which covers nearly the entire London area, including Greater London
+- *The City of London Police*, which covers the City of London. The Met has no jurisdiction in the City of London.
+
+Today we will leave the City of London for what it is because we will look at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To download our data, open Google Chrome (**within** your Desktop\@UCL environment) and navigate to [data.police.uk](https://data.police.uk/). 
+
+::: {callout.note}
+You are free to use a different browser, however, some the steps below on how to download the files may be slightly different.
+:::
+
+```{r}
+#| label: fig-data-police
+#| fig.cap: "The landing page of [data.police.uk](https://data.police.uk). [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/data_police.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/data_police.png')
+```
+
+Click on **Downloads** and subsequently select *November 2021* to *November 2021* as data range and tick the box for the *Metropolitan Police Services*. With this selection we can now download all crime data recorded by the Metropolitan Police Services for the month of November 2021.
+
+```{r}
+#| label: fig-data-police-select
+#| fig.cap: "Select the data that we want to download. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/select_data.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/select_data.png')
+```
+
+Make sure that the box in front of **Include crime data** is ticked - it should be ticked by default - and proceed to click on **Generate file**. Once your file is generated you can click on **Download now**.
+
+```{r}
+#| label: fig-data-police-download
+#| fig.cap: "Donwload the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/download_now.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/download_now.png')
+```
+
+Save the file as `crime_met_november2021` in your `Downloads` folder.
+
+```{r}
+#| label: fig-data-police-save
+#| fig-cap: "Save the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/save_now.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/save_now.png')
+```
+
+Your download should be finished within seconds. After downloading the data, go to your `Downloads` folder and right click on the `crime_met_november2021.zip` folder and click on **Extract All**. The data, which is in a compressed format (`zip`), will now be extracted so that we can use it within QGIS.
+
+```{r}
+#| label: fig-data-police-unzip
+#| fig.cap: "Unzip the data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/extract_zip.png){target=_blank'}"
+#| echo: false
+knitr::include_graphics('images/extract_zip.png')
+```
+
+Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to **Week 08: Mapping London**.
+
+```{r} 
+#| label: fig-moodle-w8
+#| fig.cap: "Geography in the Field II Moodle page. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/moodle.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/moodle.png')
+```
+
+Under the **Further resources** heading you will see two files: `Roads for mapping exercise` and `Boroughs for mapping exercise`. Right click on on the first file and click on **Save link as ...**. Give the file the name `roads` and save to your download folder.
+
+```{r}
+#| label: fig-moodle-w8-save
+#| fig.cap: "Save link as. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/save_as.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/save_as.png')
+```
+
+```{r}
+#| label: fig-moodle-w8-save-save
+#| fig.cap: "Save file to your downloads folder. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/select_data.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/save_as_save.png')
+```
+
+Right click on on the second file and click on **Save link as ...**. Give the file the name `boroughs` and save to your download folder.
+
+After downloading both files, go to your `Downloads` folder and make sure both are extracted. Your `Downloads` folder should look something like this:
+
+```{r}
+#| label: fig-your-downloads
+#| fig.cap: "Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/all_download.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/all_download.png')
+```
+
+The final step we need to take is to copy our downloaded data to a new folder. In your `Documents` folder, create a new folder `GEOG0014_W08`. We will use this folder as our *working directory*. Now move the three folders containg the crime data, borough data and road data that you unzipped from your `Downloads` folder to this new `GEOG0014_W08` folder. Your *working directory* should look like this:
+
+```{r}
+#| label: fig-wd
+#| fig.cap: "Your working directory is now all set up. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/wd.png){target='_blank'}"
+#| echo: false
+knitr::include_graphics('images/wd.png')
+```
+
+We are now ready to move to mapping in QGIS.
+
+::: {.callout-tip}
+The `roads` and `boroughs` file that we downloaded is something called a `shapefile.` A `shapefile` is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a `shapefile` consists of a **collection of files**. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
+:::
