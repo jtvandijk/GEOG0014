@@ -146,7 +146,6 @@ The final step we need to take is to copy our downloaded data to a new folder. I
 knitr::include_graphics('images/wd.png')
 ```
 
-
 ::: {.callout-tip}
 The `roads` and `boroughs` file that we downloaded is something called a `shapefile.` A `shapefile` is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a `shapefile` consists of a **collection of files**. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
 :::
