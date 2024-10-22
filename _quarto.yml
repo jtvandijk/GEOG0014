@@ -42,7 +42,7 @@ website:
       - section: "Welcome"
         contents:
           - text: "Mapping London"
-            file: index.qmd
+            file: 00-index.qmd
       - section: "Crime in London"
         contents:
           - 01-data-prep.qmd
