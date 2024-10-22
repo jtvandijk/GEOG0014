@@ -182,28 +182,28 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">2</span> Data mapping</h1>
 <section id="starting-qgis" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="starting-qgis"><span class="header-section-number">2.1</span> Starting QGIS</h2>
-<p>Now we have downloaded and organised our data, we can open <a href="https://www.qgis.org/en/site/">QGIS</a>. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on <strong>QGIS Desktop 3.28</strong> to open the software.</p>
+<p>Now we have downloaded and organised our data, we can open <a href="https://www.qgis.org/en/site/">QGIS</a>. QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. Open the UCL Application Store and type <strong>QGIS</strong> In the search box. Click on <strong>QGIS 3.30</strong> to open the software.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-open-qgis" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/open_qgis.png" class="img-fluid figure-img" width="1552"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Open <strong>QGIS 3.30</strong>. <a href="https://jtvandijk.github.io/GEOG0014/images/open_qgis.png" target="_blank">[Enlarge image]</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Do not use QGIS 2.18 as the steps in this tutorial will not work!</p>
+<p>QGIS might take a few moments to start, so please be patient. Occasionally, the UCL Application Store may not launch QGIS on the first try; if this happens, simply try again a few times until it starts successfully.</p>
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-open-qgis" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/open_qgis.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Open <strong>QGIS Desktop 3.28</strong>. <a href="https://jtvandijk.github.io/GEOG0014/images/open_qgis.png" target="_blank">[Enlarge image]</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>It may take a little while before QGIS has started, so be patient. In some cases Desktop@UCL Anywhere fails to start QGIS on the first attempt, you may have to give it several attempts. Once QGIS has started, you will see the QGIS interface:</p>
+<p>Once QGIS has started, you will see two panels on the left hand side: <strong>Layers</strong> and <strong>Browser</strong>. We do not really need the second one, so you can close it by clicking on the <code>x</code>. The QGIS interface should now look something like this:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-interface-qgis" class="quarto-figure quarto-figure-center anchored">
@@ -214,7 +214,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>On the left hand sizes you see two panels: <strong>Layers</strong> and <strong>Browser</strong>. We do not really need the second one, so you can close it by clicking on the <code>x</code>.</p>
 </section>
 <section id="loading-spatial-data" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="loading-spatial-data"><span class="header-section-number">2.2</span> Loading spatial data</h2>
@@ -240,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a message popping up saying something about “Select Transformations for roads” just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
+<p>Click <strong>Open</strong>. Then click <strong>Add</strong>. If you get a message popping up saying something about <em>Select Transformations for roads</em> just click on <strong>OK</strong>. Now <strong>Close</strong> the dialog box. You should now see the road network of Camden and Islington loaded:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-roads-loaded" class="quarto-figure quarto-figure-center anchored">
@@ -300,18 +299,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="inspecting-our-data-in-excel" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="inspecting-our-data-in-excel"><span class="header-section-number">2.4</span> Inspecting our data in Excel</h2>
-<p>The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS.</p>
+<p>Next, we will take a closer look at the crime data we downloaded before importing it into QGIS.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The crime file that we downloaded is in a so-called <code>csv</code> format. <code>csv</code> stands for comma (or character) separated values. A <code>csv</code> file can be thought of as stripped down Excel spreadsheet in which every column of data is separated by a comma. If you open a <code>csv</code> file within Excel, however, it will look “normal”.</p>
+<p>The crime file we downloaded is in a <code>csv</code> format, which stands for comma-separated values. A <code>csv</code> file can be thought of as a simplified version of an Excel spreadsheet, where each column of data is separated by a comma. When you open a <code>csv</code> file in Excel, it appears in a standard table format.</p>
 </div>
 </div>
 </div>
-<p>Navigate to your <code>working directory</code> and go to <code>crime_met_november2021</code> &gt; <code>2021_11</code>. Now open the <code>2011-11-metropolitan-street</code> file using Excel.</p>
+<p>Navigate to your <code>working directory</code> and go to <code>crime_met_november2023</code> &gt; <code>2023_11</code>. Now open the <code>2023-11-metropolitan-street</code> file using Excel.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-inspect-data" class="quarto-figure quarto-figure-center anchored">
@@ -361,16 +360,26 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>For us, the main fields we are interested include <code>Longitude</code> and <code>Latitude</code> (for plotting the crimes in QGIS) as well as <code>Crime Type</code> (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do <strong>not</strong> save the file.</p>
+<p>The main fields of interest for us are <code>Longitude</code> and <code>Latitude</code> (which we will use to plot the crimes in QGIS) and <code>Crime type</code> (to filter crimes by type). After reviewing the data, you can close Excel.</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Please ensure that you do <strong>not</strong> save any changes to the file.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="loading-our-data-into-qgis" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="loading-our-data-into-qgis"><span class="header-section-number">2.5</span> Loading our data into QGIS</h2>
 <p>Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:</p>
 <ul>
 <li>Go to <strong>Layer</strong> &gt; <strong>Add Layer</strong> &gt; <strong>Add Delimited Text Layer …</strong>. Because our data is a <code>csv</code> file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.</li>
-<li>Click on the three dots (<em>…</em>) next to the <strong>File name</strong> box and navigate to your <em>working directory</em>. Then go into your <code>crime_met_november2021</code> folder, your <code>2021-11</code> folder, and <strong>Open</strong> the <code>2021-11-metropolitan-street</code> file.</li>
-<li>Under <strong>Geometry Definitions</strong> make sure that <strong>X field</strong> is set to <code>Longitude</code> and <strong>Y field</strong> is set to <code>Latitude</code>. Here we inform QGIS that we are dealing with locations.</li>
-<li>Without going into further details, we need to tell QGIS which <a href="https://en.wikipedia.org/wiki/Map_projection">map projection</a> was used to record the crime locations. By specifying a <a href="https://en.wikipedia.org/wiki/Map_projection">map projection</a> QGIS will know how to plot the crime locations in their correct positions. To do so, still under the <strong>Geometry Definitions</strong> tab, click on the <strong>Select CRS</strong> button. You will find this is directly next to the <em>invalid projection</em> message. In the <strong>Filter</strong> box type: <code>EPSG 4326</code>. Only one option should show up: <code>WGS 84</code>. Select this option and click <strong>OK</strong>.</li>
+<li>Click on the three dots (<em>…</em>) next to the <strong>File name</strong> box and navigate to your <em>working directory</em>. Then go into your <code>crime_met_november2023</code> folder, your <code>2023-11</code> folder, and <strong>Open</strong> the <code>2023-11-metropolitan-street</code> file.</li>
+<li>Under <strong>Geometry Definitions</strong> make sure that <strong>X field</strong> is set to <code>Longitude</code> and <strong>Y field</strong> is set to <code>Latitude</code>. This informs QGIS that we are working with geographical locations.</li>
+<li>To specify the <a href="https://en.wikipedia.org/wiki/Map_projection">map projection</a> used for recording the crime locations, click on the <strong>Select CRS</strong> button. You will find this is directly next to the <code>invalid projection</code> message. In the <strong>Filter</strong> box type: <code>EPSG 4326</code>. Only one option should show up: <code>WGS 84</code>. Select this option and click <strong>OK</strong>.</li>
 <li>Now click <strong>Add</strong>. <em>This may take a little bit of time!</em> Click <strong>Close</strong> to exit the dialog box.</li>
 </ul>
 <p>The <strong>GIF</strong> below summarises these steps:</p>
@@ -384,13 +393,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the <code>roads</code> layer and opting for <strong>Zoom to Layer</strong>:</p>
+<p>Here we now have every crime reported for the month November 2023 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the <code>roads</code> layer and opting for <strong>Zoom to Layer</strong>:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-crime-ci" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/crime_ci.png" class="img-fluid figure-img" width="1552"></p>
-<figcaption class="figure-caption">Figure&nbsp;11: All crime that is recorded in Camden and Islington in November 2021. <a href="https://jtvandijk.github.io/GEOG0014/images/crime_ci.png" target="_blank">[Enlarge image]</a></figcaption>
+<figcaption class="figure-caption">Figure&nbsp;11: All crime that is recorded in Camden and Islington in November 2023. <a href="https://jtvandijk.github.io/GEOG0014/images/crime_ci.png" target="_blank">[Enlarge image]</a></figcaption>
 </figure>
 </div>
 </div>
@@ -398,9 +407,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="making-selections" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="making-selections"><span class="header-section-number">2.6</span> Making selections</h2>
-<p>Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to filter out only those crimes that took place within the boundaries of these boroughs, and remove the rest. We will do that in two steps. First, we will export the boundaries of Camden and Islington as a separate file. Second, we will select the crimes that fall within the boundaries of Camden and Islington. Let’s first export the boundaries of Camden and Islington:</p>
+<p>Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As our focus is solely on crimes in Camden and Islington, we will filter the dataset to retain only the relevant incidents. This process involves two steps: first, we will export the boundaries of Camden and Islington as a separate file, and then we will select the crimes that fall within those boundaries. Let’s begin by exporting the boundaries of Camden and Islington:</p>
 <ul>
-<li>Untick the boxes of the <code>roads</code> and <code>2021-11-metropolitan-street</code> layers in the <strong>Layers</strong> panel to deactivate them.</li>
+<li>Untick the boxes of the <code>roads</code> and <code>2023-11-metropolitan-street</code> layers in the <strong>Layers</strong> panel to deactivate them.</li>
 <li>Select the <code>boroughs</code> layer by clicking on it.</li>
 <li>Click on the <strong>Select Features by Area or Single Click</strong> button: <br><br></li>
 </ul>
@@ -444,11 +453,11 @@ ul.task-list li input[type="checkbox"] {
 <p>The next thing to do is to extract only those crimes that fall within the boundaries of our newly created <code>shapefile</code>:</p>
 <ul>
 <li>Go to <strong>Vector</strong> &gt; <strong>Geoprocessing Tools</strong> &gt; <strong>Clip …</strong>.</li>
-<li>Set <code>2011-11-metropolitan-street</code> as <strong>Input layer</strong> and set <code>cam_is</code> as <strong>Overlay layer</strong>.</li>
+<li>Set <code>2023-11-metropolitan-street</code> as <strong>Input layer</strong> and set <code>cam_is</code> as <strong>Overlay layer</strong>.</li>
 <li>Click on the three dots (<strong>…</strong>) next to the empty box with <em>[Create temporary layer]</em> and opt for <strong>Save to File …</strong>. Navigate to your <em>working directory</em> and type in <code>cam_is_clip</code> as <strong>File name</strong>. Change <strong>Save as type</strong> to <code>SHP files (*.shp)</code> and click <strong>Save</strong>.</li>
 <li>Click <strong>Run</strong>. <em>This may take a few seconds.</em> Once the process is done, you can click <strong>Close</strong>.</li>
 </ul>
-<p>We now have successfully ‘clipped’ the crimes that occurred within the boundaries of Camden and Islington. The <strong>GIF</strong> below summarises these steps:</p>
+<p>We have now successfully filtered the dataset to include only the crimes that occurred within the boundaries of Camden and Islington. The <strong>GIF</strong> below summarises these steps:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-select-crimes" class="quarto-figure quarto-figure-center anchored">
@@ -459,7 +468,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Before moving to our visualisation, we can remove the <code>2011-11-metropolitan-street</code> layer by right clicking on the <code>layer</code> in the <strong>Layers</strong> panel and opting for <strong>Remove Layer…</strong>. We can do the same for the <code>boroughs</code> layer. Our QGIS screen should now look something like this:</p>
+<p>Before moving to our visualisation, we can remove the <code>2023-11-metropolitan-street</code> layer by right clicking on the <code>layer</code> in the <strong>Layers</strong> panel and opting for <strong>Remove Layer…</strong>. We can do the same for the <code>boroughs</code> layer. Our QGIS screen should now look something like this:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-ready-4-vis" class="quarto-figure quarto-figure-center anchored">
@@ -483,7 +492,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="visualising-data" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="visualising-data"><span class="header-section-number">2.7</span> Visualising data</h2>
-<p>Based on the shapes of the streets and the outline of the street network, you may be able to recognise some streets already. However, we can also add something called a <em>base map</em> layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:</p>
+<p>Based on the shapes of the streets and the outline of the street network, you may already recognise some streets. However, to provide additional context, we can add a base map layer. A base map is a background layer with geographic information that enhances the visual context of your map. To add a base map, we will need to install a plugin. We can do that as follows:</p>
 <ul>
 <li>Go to <strong>Plugins</strong> &gt; <strong>Manage and Install Plugins</strong>.</li>
 <li>Search for <strong>QuickMapServices</strong> and click on <strong>Install plugin</strong>.</li>
@@ -496,7 +505,7 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>OSM stands for <a href="https://www.openstreetmap.org/#map=6/54.910/-3.432">OpenStreetMap</a>. OpenStreetMap is a collaborative project to create a free editable geographic database of the world, comparable to Wikipedia but then for spatial information.</p>
+<p>OSM stands for <a href="https://www.openstreetmap.org">OpenStreetMap</a>. OpenStreetMap is a collaborative project to create a free editable geographic database of the world, comparable to Wikipedia but then for spatial information.</p>
 </div>
 </div>
 </div>
@@ -515,7 +524,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Right click on the <code>cam_is_clip</code> layer in the <strong>Layers</strong> panel and click on <strong>Properties …</strong>. Here we can change the symbology of the layer.</li>
 <li>At the top of the menu change <strong>Single Symbol</strong> to <strong>Categorized</strong>.</li>
-<li>Click on the <strong>Value</strong> drop-down menu and select <code>Crime type</code>. <em>Note that these are the columns that we have seen when we looked at the data in Excel.</em></li>
+<li>Click on the <strong>Value</strong> drop-down menu and select <code>Crime type</code>. Note that these are the columns that we have seen when we looked at the data in Excel.</li>
 <li>At the bottom of the menu click on <strong>Classify</strong>. All the different crime types now appear, with each their own symbol. Click <strong>Apply</strong> andExpression click <strong>OK</strong>.</li>
 </ul>
 <p>The QGIS screen now shows a colour for each crime type. The <strong>GIF</strong> below summarises these steps:</p>
@@ -626,7 +635,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>In this exercise we have downloaded some data, created a spatial data object by loading the data into QGIS, made selections to our data (i.e.&nbsp;by clipping out our boroughs and by making a selection on crime type), and we have looked at some of the styling options. The final step is to finalise the styling and get the map out of QGIS. This is done through the QGIS <strong>Print Layout</strong>:</p>
+<p>In this exercise, we have downloaded data, created a spatial data object by loading it into QGIS, and made selections to our data by clipping out our boroughs and filtering by crime type. We have also explored some styling options. The final step is to refine the styling and export the map from QGIS, which we will accomplish using the <strong>Print Layout</strong>:</p>
 <ul>
 <li>Go to <strong>Project</strong> &gt; <strong>New Print Layout …</strong>.</li>
 <li>Give it a name, e.g.&nbsp;<code>crime_asb</code>.</li>
@@ -644,7 +653,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Draw a box on the canvas. The crime map should now appear.</li>
 <li>Using the toolbar on the left hand side, there is several other options such as <strong>Add scale bar</strong>, <strong>Add North Arrow</strong>, and <strong>Add Legend</strong>. <em>There are lots of options to play around with!</em></li>
-<li>Once you are happy with your map, you can save your map by going to <strong>Layout</strong> &gt; <strong>Export as Image …</strong>. If you get a message popping up saying something about “Project Contains WMS Layers” just click on <strong>Close</strong>. Navigate to your <em>working directory</em>, give your map a name and click <strong>Save</strong>. Also click <strong>Save</strong> on the next window that pops up.</li>
+<li>Once you are happy with your map, you can save your map by going to <strong>Layout</strong> &gt; <strong>Export as Image …</strong>. If you get a message popping up saying something about <em>Project Contains WMS Layers</em> just click on <strong>Close</strong>. Navigate to your <em>working directory</em>, give your map a name and click <strong>Save</strong>. Also click <strong>Save</strong> on the next window that pops up.</li>
 </ul>
 <p>These steps should create an image which you should be able to find in your <em>working directory</em>. The <strong>GIF</strong> below summarises these steps:</p>
 <div class="cell">
@@ -657,14 +666,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>This image is now ready to be used outside QGIS.</p>
+<p>You can export the map as <code>png</code> or <code>jpeg</code> for usage outside QGIS.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The map that we have created now requires some TLC on the styling front. There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on <a href="https://docs.qgis.org/3.28/en/docs/training_manual/map_composer/map_composer.html">Using the Print Layout</a> and QGIS manual on <a href="https://docs.qgis.org/3.28/en/docs/user_manual/print_composer/index.html">Laying out maps</a>.</p>
+<p>The map we have created now needs some attention to its styling. QGIS offers a wide range of options for customising the appearance of your maps, so feel free to experiment with different colours and settings. Have a look at the QGIS tutorial on <a href="https://docs.qgis.org/3.30/en/docs/training_manual/map_composer/map_composer.html">Using the Print Layout</a> and QGIS manual on <a href="https://docs.qgis.org/3.30/en/docs/user_manual/print_composer/index.html">Laying out maps</a>.</p>
 </div>
 </div>
 </div>

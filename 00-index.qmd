@@ -1,4 +1,4 @@
-# Mapping London {.unnumbered}
+# Geography in the Field II {.unnumbered}
 
 ```{r} 
 #| label: gif-welcome
@@ -6,7 +6,7 @@
 knitr::include_graphics('images/fig-gif-welcome.jpg')
 ```
 
-## London in numbers {.unnumbered}
+## Mapping London {.unnumbered}
 It is an exciting time to be a quantitative geographer in London. The city is producing more data than ever, and maps, graphics, and infographics about London are everywhere. With more people living here than at any point in its history, geographers have a unique opportunity to use these new data sources for research. At the same time, we can approach the information with a critical eye, thanks to the insights we have gained from decades of social and spatial research. This week we will therefore focus on exploring some quantitative data on London and putting these on the map. Literally.
 
 ::: {.callout-note}

@@ -1,12 +1,12 @@
 # Data preparation
-This week we will be mapping **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). The data we will be working with for this week's task are downloaded from the [data.police.uk](https://data.police.uk/) website. 
+This week we will be mapping crime hotspots in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). The data we will be working with for this week's task are downloaded from the [data.police.uk](https://data.police.uk/) website. 
 
 ::: {.callout-warning}
-You are expected to work through the following computer tutorial individually, but you will submit this week's worksheet as a **group**.
+You are expected to work through the computer tutorial individually and at your own pace, but you will submit this week's worksheet as a **group**.
 :::
 
 ## Getting started
-Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html) or at very least have been introduced to [ArcGIS Online](https://www.arcgis.com/index.html) in Geography in the Field 1, but today we will be using the open-source GIS software suite [QGIS](https://www.qgis.org/en/site/). 
+Some of you may already have played around with some GIS software such as [ArcGIS](https://www.arcgis.com/index.html) or at very least have been introduced to [ArcGIS Online](https://www.arcgis.com/index.html) in Geography in the Field I, but today we will be using the open-source GIS software suite [QGIS](https://www.qgis.org/en/site/). 
 
 ::: {.callout-tip}
 QGIS is an open-source graphic user interface GIS with many community developed add-on packages that provide additional functionality to the software. A copy of [QGIS](https://www.qgis.org/en/site/) can be accessed through the UCL Application Store on all cluster room computers as well as on [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere).
@@ -48,13 +48,13 @@ There are a total of 45 territorial police forces (TPFs) and 3 special police fo
 
 When you look to download crime data for London, for example, there are two territorial police forces working within the city and its greater metropolitan area:
 
-- *The Metropolitan Police Force*, which covers nearly the entire London area, including Greater London
-- *The City of London Police*, which covers the City of London. The Met has no jurisdiction in the City of London.
+- [The Metropolitan Police](https://www.met.police.uk/), which covers nearly the entire Greater London area.
+- [The City of London Police](https://www.cityoflondon.police.uk/), which covers the City of London. 
 
-Today we will leave the City of London for what it is because we will look at **crime hotspots** in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en), both of which are not part of the City of London. To download our data, open Google Chrome (**within** your Desktop\@UCL environment) and navigate to [data.police.uk](https://data.police.uk/). 
+Today we will leave the City of London for what it is because we will look at crime hotspots in the London boroughs of [Camden](https://www.google.com/maps/place/London+Borough+of+Camden,+London/@51.5428102,-0.1944449,13z/data=!3m1!4b1!4m5!3m4!1s0x48761aec186b9a3d:0x41185c626be66e0!8m2!3d51.5454736!4d-0.1627902?hl=en) and [Islington](https://www.google.com/maps/place/London+Borough+of+Islington,+London/@51.5470193,-0.1444663,13z/data=!3m1!4b1!4m5!3m4!1s0x48761b5dedeb3be5:0x54f085cb18ec65c9!8m2!3d51.5465063!4d-0.1058058?hl=en). To download the data we will need, open Google Chrome (**within** your Desktop@UCL environment) and navigate to [data.police.uk](https://data.police.uk/). 
 
 ::: {.callout-tip}
-You are free to use a different browser, however, some the steps below on how to download the files may be slightly different.
+You can use any browser to download files, but note that the specific steps might vary slightly depending on the browser you choose.
 :::
 
 ```{r}
@@ -64,7 +64,7 @@ You are free to use a different browser, however, some the steps below on how to
 knitr::include_graphics('images/data_police.png')
 ```
 
-Click on **Downloads** and subsequently select *November 2023* to *November 2023* as data range and tick the box for the *Metropolitan Police Services*. With this selection we can now download all crime data recorded by the Metropolitan Police Services for the month of November 2023
+Click on **Downloads** and subsequently select *November 2023* to *November 2023* as data range and tick the box for the *Metropolitan Police Service*. With this selection we can download all crime data recorded by the Metropolitan Police Services for the month of November 2023
 
 ```{r}
 #| label: fig-data-police-select
@@ -91,7 +91,7 @@ Save the file as `crime_met_november2023` in your `Downloads` folder.
 knitr::include_graphics('images/save_now.png')
 ```
 
-Your download should be finished within seconds. After downloading the data, go to your `Downloads` folder and right click on the `crime_met_november2023.zip` folder and click on **Extract All**. The data, which is in a compressed format (`zip`), will now be extracted so that we can use it within QGIS later on.
+Your download should complete within seconds. Once it is finished, navigate to your `Downloads`, right click on the `crime_met_november2023.zip` folder, and select **Extract All**.  This will unpack the compressed data, making it ready for use in QGIS later.
 
 ```{r}
 #| label: fig-data-police-unzip
@@ -101,7 +101,9 @@ knitr::include_graphics('images/extract_zip.png')
 ```
 
 ## Reference data
-Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to **Week 08: Mapping London**.
+Now we have downloaded the crime data, we need to download some background and reference data. Two data sets are available on Moodle: the boundaries of the boroughs in London as well as the London road network. 
+
+Within your UCL Desktop environment, navigate to the Geography in the Field II Moodle page and scroll down to **Week 8: Mapping London**.
 
 ```{r} 
 #| label: fig-moodle-w8
@@ -132,12 +134,12 @@ After downloading both files, go to your `Downloads` folder and make sure both a
 
 ```{r}
 #| label: fig-your-downloads
-#| fig.cap: "Your download folder should now contain three **unzipped** folders containing our crime data, our borough data and our road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/all_download.png){target='_blank'}"
+#| fig.cap: "Your download folder should now contain three **unzipped** folders: one with the crime data, one with the borough data, and another with the road data. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/all_download.png){target='_blank'}"
 #| echo: false
 knitr::include_graphics('images/all_download.png')
 ```
 
-The final step we need to take is to copy our downloaded data to a new folder. In your `Documents` folder, create a new folder `GEOG0014_W08`. We will use this folder as our *working directory*. Now move the three folders containg the crime data, borough data and road data that you unzipped from your `Downloads` folder to this new `GEOG0014_W08` folder. Your *working directory* should look something like this:
+The final step is to organise our downloaded data. In your `Documents` folder, create a new folder called `GEOG0014_W08`.  This will serve as our *working directory*. Now move the three **unzipped** folders containing the crime data, borough data and road data from your `Downloads` folder into the newly created `GEOG0014_W08` folder. Your *working directory* should look something like this:
 
 ```{r}
 #| label: fig-wd
@@ -147,11 +149,11 @@ knitr::include_graphics('images/wd.png')
 ```
 
 ::: {.callout-tip}
-The `roads` and `boroughs` file that we downloaded is something called a `shapefile.` A `shapefile` is a file that GIS software uses to store spatial data. In the case of a shapefile this is in actual fact a misnomer because a `shapefile` consists of a **collection of files**. Without going into detail: each of these files does something slightly different and the the software we will be using requires needs all of them in order to understand the data.
+The `roads` and `boroughs` files we downloaded are in a format called a `shapefile`, which is used by GIS software to store spatial data. Despite the name, a `shapefile` is not just a single file but a collection of related files. Each file within the `shapefile` set serves a specific function, and the GIS software requires all of them to correctly interpret and display the spatial data.
 :::
 
 ::: {.callout-warning}
 While `shapefiles` are still widely used and many online spatial files are available in this format, they are somewhat outdated. A more modern alternative is the `GeoPackage` format, and we recommend using a `GeoPackage` whenever possible.
 :::
 
-We now have all the datasets we need and are ready to move on to QGIS to create some maps.
+We now have now downloaded and oranised all the datasets we need and are ready to move on to QGIS to create some maps.

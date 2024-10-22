@@ -44,3 +44,16 @@ for htmlf in html_files:
     
     with open(htmlf, 'w') as file:
         file.write(html_content)
+        
+# fix index page redirect
+htmlredir = 'docs/index.html'
+with open(htmlredir) as file:
+    html_content = file.read()
+
+    # update redirect / if to W02
+    html_content = html_content.replace('03-worksheet.html', \
+                                        '00-index.html')
+
+    # write
+    with open (htmlredir, 'w') as file:
+      file.write(html_content)

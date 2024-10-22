@@ -1,20 +1,20 @@
 # Data mapping
 
 ## Starting QGIS
-Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. In the search box of the task bar, type in QGIS and click on **QGIS Desktop 3.28** to open the software. 
-
-::: {.callout-warning}
-Do not use QGIS 2.18 as the steps in this tutorial will not work!
-:::
+Now we have downloaded and organised our data, we can open [QGIS](https://www.qgis.org/en/site/). QGIS is a free and open-source cross-platform desktop geographic information system application that supports viewing, editing, and analysis of geospatial data. Open the UCL Application Store and type **QGIS** In the search box. Click on **QGIS 3.30** to open the software. 
 
 ```{r}
 #| label: fig-open-qgis
-#| fig.cap: "Open **QGIS Desktop 3.28**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/open_qgis.png){target='_blank'}"
+#| fig.cap: "Open **QGIS 3.30**. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/open_qgis.png){target='_blank'}"
 #| echo: false
 knitr::include_graphics('images/open_qgis.png')
 ```
 
-It may take a little while before QGIS has started, so be patient. In some cases Desktop@UCL Anywhere fails to start QGIS on the first attempt, you may have to give it several attempts. Once QGIS has started, you will see the QGIS interface:
+::: {.callout-warning}
+QGIS might take a few moments to start, so please be patient. Occasionally, the UCL Application Store may not launch QGIS on the first try; if this happens, simply try again a few times until it starts successfully.
+:::
+
+Once QGIS has started, you will see two panels on the left hand side: **Layers** and **Browser**. We do not really need the second one, so you can close it by clicking on the `x`. The QGIS interface should now look something like this:
 
 ```{r}
 #| label: fig-interface-qgis
@@ -22,8 +22,6 @@ It may take a little while before QGIS has started, so be patient. In some cases
 #| echo: false
 knitr::include_graphics('images/interface.png')
 ```
-
-On the left hand sizes you see two panels: **Layers** and **Browser**. We do not really need the second one, so you can close it by clicking on the `x`. 
 
 ## Loading spatial data 
 We can now start by adding our spatial data. We will start by adding our `roads` layer. Click on **Layer** > **Add Layer** > **Add Vector Layer ...**. 
@@ -44,7 +42,7 @@ Click on the three dots (**...**) next to the **Vector Dataset(s)** box and navi
 knitr::include_graphics('images/add_shp.png')
 ```
 
-Click **Open**. Then click **Add**. If you get a message popping up saying something about "Select Transformations for roads" just click on **OK**. Now **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
+Click **Open**. Then click **Add**. If you get a message popping up saying something about *Select Transformations for roads* just click on **OK**. Now **Close** the dialog box. You should now see the road network of Camden and Islington loaded:
 
 ```{r}
 #| label: fig-roads-loaded
@@ -86,13 +84,13 @@ knitr::include_graphics('images/save_project.png')
 ```
 
 ## Inspecting our data in Excel
-The next thing we want to do is have a closer look at the crime data that we downloaded before loading them too in QGIS. 
+Next, we will take a closer look at the crime data we downloaded before importing it into QGIS.
 
 ::: {.callout-tip}
-The crime file that we downloaded is in a so-called `csv` format. `csv` stands for comma (or character) separated values. A `csv` file can be thought of as stripped down Excel spreadsheet in which every column of data is separated by a comma. If you open a `csv` file within Excel, however, it will look "normal".
+The crime file we downloaded is in a `csv` format, which stands for comma-separated values. A `csv` file can be thought of as a simplified version of an Excel spreadsheet, where each column of data is separated by a comma. When you open a `csv` file in Excel, it appears in a standard table format.
 :::
 
-Navigate to your `working directory` and go to `crime_met_november2021` > `2021_11`. Now open the `2011-11-metropolitan-street` file using Excel. 
+Navigate to your `working directory` and go to `crime_met_november2023` > `2023_11`. Now open the `2023-11-metropolitan-street` file using Excel. 
 
 ```{r} 
 #| label: fig-inspect-data
@@ -113,15 +111,19 @@ Besides a column containing a unique `Crime ID` as well as the `Month` in which 
 | `Last outcome category` |	A reference to whichever of the outcomes associated with the crime occurred most recently. |  
 | `Context` |	A field provided for forces to provide additional human-readable data about individual crimes. |
 
-For us, the main fields we are interested include `Longitude` and `Latitude` (for plotting the crimes in QGIS) as well as `Crime Type` (to filter crime based on type of crime). After inspecting the data, you can close Excel again. Make sure that you do **not** save the file.
+The main fields of interest for us are `Longitude` and `Latitude` (which we will use to plot the crimes in QGIS) and `Crime type` (to filter crimes by type). After reviewing the data, you can close Excel.
+
+::: {.callout-warning}
+Please ensure that you do **not** save any changes to the file.
+:::
 
 ## Loading our data into QGIS 
 Now we know what we are dealing with, we can load our crime data into QGIS. To do so, there are several steps we need to take:
 
 - Go to **Layer** > **Add Layer** > **Add Delimited Text Layer ...**. Because our data is a `csv` file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.
-- Click on the three dots (*...*) next to the **File name** box and navigate to your *working directory*. Then go into your `crime_met_november2021` folder, your `2021-11` folder, and **Open** the `2021-11-metropolitan-street` file.
-- Under **Geometry Definitions** make sure that **X field** is set to `Longitude` and **Y field** is set to `Latitude`. Here we inform QGIS that we are dealing with locations.
-- Without going into further details, we need to tell QGIS which [map projection](https://en.wikipedia.org/wiki/Map_projection) was used to record the crime locations. By specifying a [map projection](https://en.wikipedia.org/wiki/Map_projection) QGIS will know how to plot the crime locations in their correct positions. To do so, still under the **Geometry Definitions** tab, click on the **Select CRS** button. You will find this is directly next to the *invalid projection* message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
+- Click on the three dots (*...*) next to the **File name** box and navigate to your *working directory*. Then go into your `crime_met_november2023` folder, your `2023-11` folder, and **Open** the `2023-11-metropolitan-street` file.
+- Under **Geometry Definitions** make sure that **X field** is set to `Longitude` and **Y field** is set to `Latitude`. This informs QGIS that we are working with geographical locations.
+- To specify the [map projection](https://en.wikipedia.org/wiki/Map_projection) used for recording the crime locations, click on the **Select CRS** button. You will find this is directly next to the `invalid projection` message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
 - Now click **Add**. *This may take a little bit of time!* Click **Close** to exit the dialog box.
 
 The **GIF** below summarises these steps:
@@ -133,19 +135,19 @@ The **GIF** below summarises these steps:
 knitr::include_graphics('images/load_crime_data.gif')
 ```
 
-Here we now have every crime reported for the month November 2021 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the `roads` layer and opting for **Zoom to Layer**:
+Here we now have every crime reported for the month November 2023 appearing across all of London. We can zoom to the Camden and Islington by right clicking on the `roads` layer and opting for **Zoom to Layer**:
 
 ```{r} 
 #| label: fig-crime-ci
-#| fig-cap: "All crime that is recorded in Camden and Islington in November 2021. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/crime_ci.png){target='_blank'}"
+#| fig-cap: "All crime that is recorded in Camden and Islington in November 2023. [[Enlarge image]](https://jtvandijk.github.io/GEOG0014/images/crime_ci.png){target='_blank'}"
 #| echo: false
 knitr::include_graphics('images/crime_ci.png')
 ```
 
 ## Making selections 
-Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As we are only interested in crimes in Camden and Islington we want to filter out only those crimes that took place within the boundaries of these boroughs, and remove the rest. We will do that in two steps. First, we will export the boundaries of Camden and Islington as a separate file. Second, we will select the crimes that fall within the boundaries of Camden and Islington. Let's first export the boundaries of Camden and Islington:
+Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As our focus is solely on crimes in Camden and Islington, we will filter the dataset to retain only the relevant incidents. This process involves two steps: first, we will export the boundaries of Camden and Islington as a separate file, and then we will select the crimes that fall within those boundaries. Let's begin by exporting the boundaries of Camden and Islington:
 
-- Untick the boxes of the `roads` and `2021-11-metropolitan-street` layers in the **Layers** panel to deactivate them.
+- Untick the boxes of the `roads` and `2023-11-metropolitan-street` layers in the **Layers** panel to deactivate them.
 - Select the `boroughs` layer by clicking on it.
 - Click on the **Select Features by Area or Single Click** button: <br /><br /> 
 ```{r} 
@@ -177,11 +179,11 @@ knitr::include_graphics('images/select_export.gif')
 The next thing to do is to extract only those crimes that fall within the boundaries of our newly created `shapefile`:
 
 - Go to **Vector** > **Geoprocessing Tools** > **Clip ...**.
-- Set `2011-11-metropolitan-street` as **Input layer** and set `cam_is` as **Overlay layer**.
+- Set `2023-11-metropolitan-street` as **Input layer** and set `cam_is` as **Overlay layer**.
 - Click on the three dots (**...**) next to the empty box with *[Create temporary layer]* and opt for **Save to File ...**. Navigate to your *working directory* and type in `cam_is_clip` as **File name**. Change **Save as type** to `SHP files (*.shp)` and click **Save**.
 - Click **Run**. *This may take a few seconds.* Once the process is done, you can click **Close**. 
 
-We now have successfully 'clipped' the crimes that occurred within the boundaries of Camden and Islington. The **GIF** below summarises these steps:
+We have now successfully filtered the dataset to include only the crimes that occurred within the boundaries of Camden and Islington. The **GIF** below summarises these steps:
 
 ```{r} 
 #| label: fig-select-crimes
@@ -190,7 +192,7 @@ We now have successfully 'clipped' the crimes that occurred within the boundarie
 knitr::include_graphics('images/select_crime.gif')
 ```
 
-Before moving to our visualisation, we can remove the `2011-11-metropolitan-street` layer by right clicking on the `layer` in the **Layers** panel and opting for **Remove Layer...**. We can do the same for the `boroughs` layer. Our QGIS screen should now look something like this:
+Before moving to our visualisation, we can remove the `2023-11-metropolitan-street` layer by right clicking on the `layer` in the **Layers** panel and opting for **Remove Layer...**. We can do the same for the `boroughs` layer. Our QGIS screen should now look something like this:
 
 ```{r}
 #| label: fig-ready-4-vis
@@ -204,7 +206,7 @@ Do not forget to save your progress once a while!
 :::
 
 ## Visualising data 
-Based on the shapes of the streets and the outline of the street network, you may be able to recognise some streets already. However, we can also add something called a *base map* layer. A base map is a layer with geographic information that serves as a background and is incredibly useful when you want to add some context to your map. We do need a little plugin to add this base map. We can do that as follows:
+Based on the shapes of the streets and the outline of the street network, you may already recognise some streets. However, to provide additional context, we can add a base map layer. A base map is a background layer with geographic information that enhances the visual context of your map. To add a base map, we will need to install a plugin. We can do that as follows:
 
 - Go to **Plugins** > **Manage and Install Plugins**.
 - Search for **QuickMapServices** and click on **Install plugin**.
@@ -212,7 +214,7 @@ Based on the shapes of the streets and the outline of the street network, you ma
 - Turn off the Camden and Islington map layer (`cam_is`) in the **Layers** panel by unticking it.
 
 ::: {.callout-note}
-OSM stands for [OpenStreetMap](https://www.openstreetmap.org/#map=6/54.910/-3.432). OpenStreetMap is a collaborative project to create a free editable geographic database of the world, comparable to Wikipedia but then for spatial information.
+OSM stands for [OpenStreetMap](https://www.openstreetmap.org). OpenStreetMap is a collaborative project to create a free editable geographic database of the world, comparable to Wikipedia but then for spatial information.
 :::
 
 You now have a view of the street data, pulled from OpenStreetMap, with the crime data drawn on top. The **GIF** below summarises these steps:
@@ -228,7 +230,7 @@ The next thing we want to do is get some more insight into our crimes. As we kno
 
 - Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Properties ...**. Here we can change the symbology of the layer.
 - At the top of the menu change **Single Symbol** to **Categorized**.
-- Click on the **Value** drop-down menu and select `Crime type`. *Note that these are the columns that we have seen when we looked at the data in Excel.*
+- Click on the **Value** drop-down menu and select `Crime type`. Note that these are the columns that we have seen when we looked at the data in Excel.
 - At the bottom of the menu click on **Classify**. All the different crime types now appear, with each their own symbol. Click **Apply** andExpression click **OK**.
 
 The QGIS screen now shows a colour for each crime type. The **GIF** below summarises these steps:
@@ -318,7 +320,8 @@ The **GIF** below summarises these steps:
 knitr::include_graphics('images/bor_out.gif')
 ```
 
-In this exercise we have downloaded some data, created a spatial data object by loading the data into QGIS, made selections to our data (i.e. by clipping out our boroughs and by making a selection on crime type), and we have looked at some of the styling options. The final step is to finalise the styling and get the map out of QGIS. This is done through the QGIS **Print Layout**:
+
+In this exercise, we have downloaded data, created a spatial data object by loading it into QGIS, and made selections to our data by clipping out our boroughs and filtering by crime type. We have also explored some styling options. The final step is to refine the styling and export the map from QGIS, which we will accomplish using the **Print Layout**:
 
 - Go to **Project** > **New Print Layout ...**.
 - Give it a name, e.g. `crime_asb`. 
@@ -333,7 +336,7 @@ knitr::include_graphics('images/add_map.png')
 
 - Draw a box on the canvas. The crime map should now appear.
 - Using the toolbar on the left hand side, there is several other options such as **Add scale bar**, **Add North Arrow**, and **Add Legend**. *There are lots of options to play around with!*
-- Once you are happy with your map, you can save your map by going to **Layout** > **Export as Image ...**. If you get a message popping up saying something about "Project Contains WMS Layers" just click on **Close**. Navigate to your *working directory*, give your map a name and click **Save**. Also click **Save** on the next window that pops up.
+- Once you are happy with your map, you can save your map by going to **Layout** > **Export as Image ...**. If you get a message popping up saying something about *Project Contains WMS Layers* just click on **Close**. Navigate to your *working directory*, give your map a name and click **Save**. Also click **Save** on the next window that pops up.
 
 These steps should create an image which you should be able to find in your *working directory*. The **GIF** below summarises these steps:
 
@@ -344,8 +347,8 @@ These steps should create an image which you should be able to find in your *wor
 knitr::include_graphics('images/export_map.gif')
 ```
 
-This image is now ready to be used outside QGIS.
+You can export the map as `png` or `jpeg` for usage outside QGIS.
 
 ::: {.callout-tip}
-The map that we have created now requires some TLC on the styling front. There are many more options on how to style the maps, so do play around with colours and settings when making your maps. Have a look at the QGIS tutorial on [Using the Print Layout](https://docs.qgis.org/3.28/en/docs/training_manual/map_composer/map_composer.html) and QGIS manual on [Laying out maps](https://docs.qgis.org/3.28/en/docs/user_manual/print_composer/index.html).
+The map we have created now needs some attention to its styling. QGIS offers a wide range of options for customising the appearance of your maps, so feel free to experiment with different colours and settings.  Have a look at the QGIS tutorial on [Using the Print Layout](https://docs.qgis.org/3.30/en/docs/training_manual/map_composer/map_composer.html) and QGIS manual on [Laying out maps](https://docs.qgis.org/3.30/en/docs/user_manual/print_composer/index.html).
 :::
