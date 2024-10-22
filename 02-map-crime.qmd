@@ -65,7 +65,7 @@ knitr::include_graphics('images/bor_loaded.png')
 ```
 
 ## Organising our layers
-Now we have our first set of data loaded, we can reorganise them a little. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer to change the drawing order. We can also zoom to a layer's full extent (right click on `roads` or `boroughs` > **Zoom to Layer**), change a layer's colour (right click on `roads` or `boroughs` > **Properties ...** > change the colour under the **Symbology** tab), and zoom in and out of the map by scrolling:
+Now we have our first set of data loaded, we can reorganise their drawing order. In the **Layers** panel, we can drag the `roads` layer on top of the `boroughs` layer to change the drawing order. We can also zoom to a layer's full extent (right click on `roads` or `boroughs` > **Zoom to Layer**), change a layer's colour (right click on `roads` or `boroughs` > **Properties ...** > change the colour under the **Symbology** tab), and zoom in and out of the map by scrolling:
 
 ```{r}
 #| label: fig-organise-data
@@ -105,7 +105,7 @@ Besides a column containing a unique `Crime ID` as well as the `Month` in which 
 | :---------- | :---------------------- |
 | `Reported by` |	The force that provided the data about the crime. |
 | `Falls within` |	The area in which the crime was recorded. |
-| `Longitude and Latitude` |	The anonymised coordinates of the location of the crime. |
+| `Longitude` and `Latitude` |	The anonymised coordinates of the location of the crime. |
 | `LSOA code and LSOA name` |	References to the [Lower Layer Super Output Area](https://statistics.ukdataservice.ac.uk/dataset/2011-census-geography-boundaries-lower-layer-super-output-areas-and-data-zones) that the anonymised point falls into, according to the LSOA boundaries provided by the Office for National Statistics. |
 | `Crime type` | One of the crime types used to categorise the offence. |
 | `Last outcome category` |	A reference to whichever of the outcomes associated with the crime occurred most recently. |  
@@ -123,8 +123,9 @@ Now we know what we are dealing with, we can load our crime data into QGIS. To d
 - Go to **Layer** > **Add Layer** > **Add Delimited Text Layer ...**. Because our data is a `csv` file we need to load it as a file in which columns are delimited by a certain character; a comma in our case.
 - Click on the three dots (*...*) next to the **File name** box and navigate to your *working directory*. Then go into your `crime_met_november2023` folder, your `2023-11` folder, and **Open** the `2023-11-metropolitan-street` file.
 - Under **Geometry Definitions** make sure that **X field** is set to `Longitude` and **Y field** is set to `Latitude`. This informs QGIS that we are working with geographical locations.
-- To specify the [map projection](https://en.wikipedia.org/wiki/Map_projection) used for recording the crime locations, click on the **Select CRS** button. You will find this is directly next to the `invalid projection` message. In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
-- Now click **Add**. *This may take a little bit of time!* Click **Close** to exit the dialog box.
+- To specify the [map projection](https://en.wikipedia.org/wiki/Map_projection) used for recording the crime locations, click on the **Select CRS** button. You will find this is directly next to the `invalid projection` selection. 
+- In the **Filter** box type: `EPSG 4326`. Only one option should show up: `WGS 84`. Select this option and click **OK**.
+- Now click **Add**. The data may take a little bit of time to load. Click **Close** to exit the dialog box.
 
 The **GIF** below summarises these steps:
 
@@ -145,7 +146,7 @@ knitr::include_graphics('images/crime_ci.png')
 ```
 
 ## Making selections 
-Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As our focus is solely on crimes in Camden and Islington, we will filter the dataset to retain only the relevant incidents. This process involves two steps: first, we will export the boundaries of Camden and Islington as a separate file, and then we will select the crimes that fall within those boundaries. Let's begin by exporting the boundaries of Camden and Islington:
+Because the crime data set covers the whole of London, and even records some crimes in locations outside of London, QGIS may get a little slow. As our focus is solely on crimes in Camden and Islington, we will filter the dataset to retain only the relevant incidents. This process involves two steps: first, we will export the boundaries of Camden and Islington as a separate file, and then we will select the crimes that fall within those boundaries. We will start by exporting the boundaries of Camden and Islington:
 
 - Untick the boxes of the `roads` and `2023-11-metropolitan-street` layers in the **Layers** panel to deactivate them.
 - Select the `boroughs` layer by clicking on it.
@@ -181,7 +182,7 @@ The next thing to do is to extract only those crimes that fall within the bounda
 - Go to **Vector** > **Geoprocessing Tools** > **Clip ...**.
 - Set `2023-11-metropolitan-street` as **Input layer** and set `cam_is` as **Overlay layer**.
 - Click on the three dots (**...**) next to the empty box with *[Create temporary layer]* and opt for **Save to File ...**. Navigate to your *working directory* and type in `cam_is_clip` as **File name**. Change **Save as type** to `SHP files (*.shp)` and click **Save**.
-- Click **Run**. *This may take a few seconds.* Once the process is done, you can click **Close**. 
+- Click **Run**. This may take a few seconds. Once the process is done, you can click **Close**. 
 
 We have now successfully filtered the dataset to include only the crimes that occurred within the boundaries of Camden and Islington. The **GIF** below summarises these steps:
 
@@ -226,12 +227,12 @@ You now have a view of the street data, pulled from OpenStreetMap, with the crim
 knitr::include_graphics('images/add_basemap.gif')
 ```
 
-The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so let's use this information in our visualisation:
+The next thing we want to do is get some more insight into our crimes. As we know: the data records crime by type, so we can use this information in our visualisation:
 
 - Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Properties ...**. Here we can change the symbology of the layer.
 - At the top of the menu change **Single Symbol** to **Categorized**.
 - Click on the **Value** drop-down menu and select `Crime type`. Note that these are the columns that we have seen when we looked at the data in Excel.
-- At the bottom of the menu click on **Classify**. All the different crime types now appear, with each their own symbol. Click **Apply** andExpression click **OK**.
+- At the bottom of the menu click on **Classify**. All the different crime types now appear, with each their own symbol. Click **Apply** and subsequently click **OK**.
 
 The QGIS screen now shows a colour for each crime type. The **GIF** below summarises these steps:
 
@@ -255,10 +256,10 @@ In addition, we can create a **hotspot** or **heatmap**. QGIS can do this automa
 
 - Right click on the `cam_is_clip` layer in the **Layers** panel and click on **Properties ...**. Here we can change the symbology of the layer.
 - At the top of the menu change **Single Symbol** to **Heatmap**.
-- Using the drop-down menu, change the **Color ramp** to **Magma** for a little more exciting map.
-- Under **Layer Rendering** set the **Opacity** to 60%, so to blend the heatmap with the OSM basemap. Click **Apply**. *This may take a few seconds.* Then click **OK**.
+- Using the drop-down menu, change the **Color ramp** to **Magma** for perhaps a more exciting map.
+- Under **Layer Rendering** set the **Opacity** to 60%, so to blend the heatmap with the OSM basemap. Click **Apply** - this may take a few seconds. Then click **OK**.
 
-We now have created a rather nice visualisation of all crime in Camden and Islington. The **GIF** below summarises these steps:
+We now have created a straightforward visualisation of the density of crimes in Camden and Islington. The **GIF** below summarises these steps:
 
 ```{r}
 #| label: fig-hot-crime
@@ -268,7 +269,7 @@ knitr::include_graphics('images/hot_crime.gif')
 ```
 
 ::: {.callout-tip}
-The resulting map is relatively dark. For your [worksheet assignment](worksheet.html) you may want to select a different colour ramp or you may try to edit the **Magma** colour ramp by setting the first colour of the **Color ramp** transparent: instead of changing the **Color ramp** to **Magma**, select the **Edit Color Ramp ...** option. Here you can set **Color 1** to **Transparent**. You can also adjust the colours by playing around with the **Gradient Stops** in the same menu. Once you are happy with the changes you have made to the colour palette click **OK**. Then click **Apply** followed by **OK** to exit the menu.     
+The resulting map is relatively dark. For your [worksheet assignment](03-worksheet.html) you may want to select a different colour ramp or you may try to edit the **Magma** colour ramp by setting the first colour of the **Color ramp** transparent: instead of changing the **Color ramp** to **Magma**, select the **Edit Color Ramp ...** option. Here you can set **Color 1** to **Transparent**. You can further adjust the colours by playing around with the **Gradient Stops** in the same menu. Once you are happy with the changes you have made to the colour palette click **OK**. Then click **Apply** followed by **OK** to exit the menu. 
 :::
 
 But what if we only want to create a density map only for a given crime type such as *anti-social behaviour*? We can do that as follows:
@@ -320,8 +321,7 @@ The **GIF** below summarises these steps:
 knitr::include_graphics('images/bor_out.gif')
 ```
 
-
-In this exercise, we have downloaded data, created a spatial data object by loading it into QGIS, and made selections to our data by clipping out our boroughs and filtering by crime type. We have also explored some styling options. The final step is to refine the styling and export the map from QGIS, which we will accomplish using the **Print Layout**:
+The final step is to refine the styling and export the map from QGIS, which we will accomplish using the **Print Layout**:
 
 - Go to **Project** > **New Print Layout ...**.
 - Give it a name, e.g. `crime_asb`. 

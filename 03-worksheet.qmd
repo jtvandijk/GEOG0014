@@ -1,5 +1,5 @@
 # Worksheet 
-Excellent. You have worked through the steps in this computer tutorial on [downloading](01-data-prep.html) and [mapping](02-map-crime.html) crime data, you need to conduct the following analysis **as a group**:
+Excellent. You have worked through the steps in this computer tutorial on [downloading](01-data-prep.html) and [mapping](02-map-crime.html) crime data. Now, **as a group**, conduct the following analysis:
 
 ## Part I: Camden and Islington 
 ::: {.callout-tip}
@@ -34,7 +34,7 @@ Please submit your answers to the questions above in the form of a short **group
 
 - No more than **500** words.
 - Maximum **4** maps, and, if using, a maximum of **2** photographs.
- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 18 March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
+- Your file should be submitted anonymously by the allocated team leader by **noon on Monday XX March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
 
 ::: {.callout-tip}
 - Be sure to include references and a bibliography in your worksheet.
