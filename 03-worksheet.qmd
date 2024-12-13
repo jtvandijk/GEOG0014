@@ -2,26 +2,26 @@
 Excellent. You have worked through the steps in this computer tutorial on [downloading](01-data-prep.html) and [mapping](02-map-crime.html) crime data. Now, **as a group**, conduct the following analysis:
 
 ## Part I: Camden and Islington 
+1.	Using what you have learnt in the computer tutorial, create two maps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*. 
+2.	There are a number of crime hot spots for *anti-social behaviour* and *theft from person* that appear near UCL, particularly around Kings Cross Station. Visit one of these areas and take note of the features that distinguish them from nearby areas with lower crime rates.
+3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
+
 ::: {.callout-tip}
 This part of the assignment focuses on *anti-social behaviour* and *theft from person* in Camden and Islington as a whole.
 :::
-
-1.	Using what you have learnt in the computer tutorial, create two maps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*. 
-2.	There are a number of crime hot spots for *anti-social behaviour* and *theft from person* that appear near UCL, particularly around Kings Cross Station). Visit one of these areas and take note of the features that distinguish them from nearby areas with lower crime rates.
-3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
 
 ::: {.callout-warning}
 For your visit: make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](). Check the weather forecast and prepare accordingly. 
 :::
 
 ## Part II: Your allocated street
-:::{.callout-tip}
-This part of the assignment focuses on *all types* of crime in your allocated street.
-:::
-
 1.	Using the *full* crime data set, zoom in on the street you have been allocated. What is the dominant type of crime on this street and its surrounding area in **November 2023**?
 2.	Revisit the [data.police.uk](https://data.police.uk/) website and create a map for all crime around your street in **November 2024** and **November 2023**. As there may be very few or no crimes in your allocated street, you can zoom out a little to incorporate surrounding streets. Do the patterns and dominant crime types change over the two years?
 3.	Given your knowledge of your street and your observations of the crime hotspots around UCL and Kings Cross, what other **existing** open datasets could be useful for researching crime in London? Please provide references to the datasets.
+
+:::{.callout-tip}
+This part of the assignment focuses on *all types* of crime in your allocated street.
+:::
 
 :::{.callout-note}
 If your allocated street falls outside, or on the administrative borders of, Camden and Islington but you would like to incorporate a road network in your map, you can download the full road network for London here as a `zip` file: [[Link]](https://github.com/jtvandijk/GEOG0014/raw/master/data/AllRoads.zip). 
@@ -34,7 +34,7 @@ Please submit your answers to the questions above in the form of a short **group
 
 - No more than **500** words.
 - Maximum **4** maps, and, if using, a maximum of **2** photographs.
-- Your file should be submitted anonymously by the allocated team leader by **noon on Monday XX March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
+- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 24 March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
 
 ::: {.callout-tip}
 - Be sure to include references and a bibliography in your worksheet.

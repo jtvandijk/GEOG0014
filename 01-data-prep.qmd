@@ -40,7 +40,7 @@ knitr::include_graphics('images/ucl_login_success.png')
 ```
 
 ## Crime data
-For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the UK across different the different police forces. 
+For our crime data, we will use data directly from the Police Data Portal, which you can find at [data.police.uk](https://data.police.uk/). This Data Portal allows you to access and generate tabular data for crime recorded in the UK across the different police forces. 
 
 ::: {.callout-note}
 There are a total of 45 territorial police forces (TPFs) and 3 special police forces (SPFs) in the UK. Each TPF covers a specific geographic area, such as the West Midlands Police, while SPFs have cross-jurisdictional authority and focus on specific types of crime, like the British Transport Police. Therefore, when downloading data for a particular area, it is important to identify which police force is responsible for that region.
