@@ -4,14 +4,14 @@ Excellent. You have worked through the steps in this computer tutorial on [downl
 ## Part I: Camden and Islington 
 1.	Using what you have learnt in the computer tutorial, create two maps for **Camden and Islington**. The first map is to show *anti-social behaviour* and the second map should show *theft from person*. 
 2.	There are a number of crime hot spots for *anti-social behaviour* and *theft from person* that appear near UCL, particularly around Kings Cross Station. Visit one of these areas and take note of the features that distinguish them from nearby areas with lower crime rates.
-3. You may use 1-2 pages your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
+3. You may use 1-2 sides in your field notebook for your individual observations. If you want to, you can take photographs to add to your worksheet submission. Please avoid photographs that clearly feature individual people.
 
 ::: {.callout-tip}
 This part of the assignment focuses on *anti-social behaviour* and *theft from person* in Camden and Islington as a whole.
 :::
 
 ::: {.callout-warning}
-For your visit: make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](). Check the weather forecast and prepare accordingly. 
+For your visit: make sure that you visit as a group during the scheduled Friday afternoon slot and follow advice in the [risk assessment](https://moodle.ucl.ac.uk/mod/resource/view.php?id=6198234). Check the weather forecast and prepare accordingly. 
 :::
 
 ## Part II: Your allocated street
@@ -34,14 +34,14 @@ Please submit your answers to the questions above in the form of a short **group
 
 - No more than **500** words.
 - Maximum **4** maps, and, if using, a maximum of **2** photographs.
-- Your file should be submitted anonymously by the allocated team leader by **noon on Monday 24 March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
+- Your file should be submitted by the allocated team leader by **noon on Monday 24 March**, using the Turnitin link on [Moodle]() *GEOG0014 Worksheet 4 London mapping*.
 
 ::: {.callout-tip}
 - Be sure to include references and a bibliography in your worksheet.
 - When creating your maps, consider incorporating essential elements such as a legend, title, north arrow, and scale bar.
 - Please submit the worksheet as a `docx` or `pdf` document.
-- One submission per group. Please follow the [guidelines for group submissions](). 
+- One submission per group. Please follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/mod/turnitintooltwo/view.php?id=6198250). 
 :::
 
 ## Further questions
-Any questions about these tasks please use the W08 forum on [Moodle](). [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
+Any questions about these tasks please use the W08 forum on [Moodle](https://moodle.ucl.ac.uk/mod/forum/view.php?id=6198348). [That is it for this week's Geography in the Field!](https://www.youtube.com/watch?v=h_D3VFfhvs4)
