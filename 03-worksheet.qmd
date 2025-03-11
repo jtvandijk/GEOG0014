@@ -40,7 +40,7 @@ Please submit your answers to the questions above in the form of a short **group
 - Be sure to include references and a bibliography in your worksheet.
 - When creating your maps, consider incorporating essential elements such as a legend, title, north arrow, and scale bar.
 - Please submit the worksheet as a `docx` or `pdf` document.
-- One submission per group. Please follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/mod/turnitintooltwo/view.php?id=6198250). 
+- One submission per group. Please follow the [guidelines for group submissions](https://moodle.ucl.ac.uk/course/section.php?id=1057253). 
 :::
 
 ## Further questions
